@@ -71,16 +71,16 @@ O grande objetivo desse modelo é fazer com que os recursos estejam disponíveis
 📂 API     
 ├─ 📂 src                       
 │  ├─ 📂 controllers            
-│  │  └─ livroController.js          
+│  │  └─ produtoController.js          
 │  ├─ 📂 models                 
-│  │  └─ livroModel.js      
+│  │  └─ produtoModel.js      
 │  ├─ 📂 routes                 
-│  │  └─ livroRouter.js      
+│  │  └─ produtoRouter.js      
 │  └─ app.js                 
 ├─ package-lock.json         
 ├─ package.json  
 ├─ .gitignore 
-├─ .gitignore              
+├─ README.md             
 └─ server.js
 ```
 
