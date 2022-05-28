@@ -95,6 +95,12 @@ const findOneEbookByTitle = (req, res) => {
     }
 }
 
+const createEbook = (req, res) => {
+    const { title, paginas, author} = req.body
+
+    if (!title || title.trim()== "") throw new Error()
+}
+
 module.exports = {
     findAllEbooks,
     findById,
