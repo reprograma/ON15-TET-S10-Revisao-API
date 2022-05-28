@@ -75,7 +75,7 @@ O grande objetivo desse modelo é fazer com que os recursos estejam disponíveis
 │  ├─ 📂 models                 
 │  │  └─ produtoModel.js      
 │  ├─ 📂 routes                 
-│  │  └─ produtoRouter.js      
+│  │  └─ produtoRouter.js            
 │  └─ app.js                 
 ├─ package-lock.json         
 ├─ package.json  
