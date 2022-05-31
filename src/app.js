@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // importar as dependencias
 const express = require('express');
 const cors = require('cors')
@@ -15,4 +16,18 @@ app.use(cors())
 app.use("/livros", livrosRotas)
 
 // exporta ( deixa publica) a nossa api
+=======
+const express = require("express")
+const cors = require("cors")
+const app = express()
+const livrosRoutes = require("./routes/livroRouter")
+
+app.use(express.json())
+app.use(cors())
+
+app.use("/livros", livrosRoutes)
+
+
+
+>>>>>>> 9b15933 (aula 28/05)
 module.exports = app
