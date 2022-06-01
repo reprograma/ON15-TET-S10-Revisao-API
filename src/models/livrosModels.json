@@ -3,13 +3,21 @@
         "id": 0,
         "autor": "Andrew donkin",
         "paginas" : 122,
+<<<<<<< HEAD
         "titulo" : "Atermis Fowl" 
+=======
+        "titulo" : "Atermis Fowl"
+>>>>>>> bc9a0fcdb58e080516f97f067b0207f7887c7881
     },
     {
         "id": 1,
         "autor": "J.K. Rowling",
         "paginas" : 208,
+<<<<<<< HEAD
         "titulo" : "Harry Potter e a pedra filosofal" 
+=======
+        "titulo" : "Harry Potter e a pedra filosofal fogo" 
+>>>>>>> bc9a0fcdb58e080516f97f067b0207f7887c7881
     },
     {
         "id": 2,
@@ -29,4 +37,10 @@
         "paginas" : 432,
         "titulo" : "Harry Potter e o enigma do príncipe" 
     }
+<<<<<<< HEAD
 ]
+=======
+]
+
+
+>>>>>>> bc9a0fcdb58e080516f97f067b0207f7887c7881
