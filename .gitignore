@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 node_modules/
 =======
+=======
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
 node_modules/
 # Logs
 logs
@@ -131,5 +134,9 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .yarn/install-state.gz
+<<<<<<< HEAD
 .pnp.*
 >>>>>>> 9b15933 (aula 28/05)
+=======
+.pnp.*
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250

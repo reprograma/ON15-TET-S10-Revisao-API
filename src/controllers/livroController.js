@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const livrosModel = require('../models/livrosModels.json')
 
 const findAllEbooks = (req, res) => {
@@ -49,6 +50,8 @@ const findAllEbooks = (req, res) => {
             details: "query invalida: ",
             query: req.query
 =======
+=======
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
 const livrosModel = require("../models/livrosModels.json")
 
 const findAllEbooks = (request, response) => {
@@ -84,11 +87,15 @@ const findAllEbooks = (request, response) => {
             message: error.message,
             details: "Não foi possível encontrar um resultado para essa query :(",
             errorCode: 404
+<<<<<<< HEAD
 >>>>>>> 9b15933 (aula 28/05)
+=======
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
         })
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const findById = (req, res) => {
     const { id } = req.params
@@ -106,6 +113,8 @@ const findById = (req, res) => {
             message: "Poxa, desculpa, foi mal, ainda não possuimos esse livro no nosso catálago.",
             details: error.message,
 =======
+=======
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
 const findById = (request, response) => {
    try {
         let idRequest = request.params.id
@@ -141,11 +150,15 @@ const findOneEbookByTitle = (request, response) => {
             message: "Poxa, ainda não temos esse livro no catálogo, foi mal :(",
             details: error.message,
             errorCode: 404
+<<<<<<< HEAD
 >>>>>>> 9b15933 (aula 28/05)
+=======
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
         })
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const findOneEbookByTitle = (req, res) => {
     // const req.query.title
@@ -183,9 +196,14 @@ module.exports = {
     findById,
     findOneEbookByTitle
 =======
+=======
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
 module.exports = {
     findAllEbooks,
     findById,
     findOneEbookByTitle,
+<<<<<<< HEAD
 >>>>>>> 9b15933 (aula 28/05)
+=======
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
 }

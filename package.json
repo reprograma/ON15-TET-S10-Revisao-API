@@ -10,15 +10,20 @@
   "repository": {
     "type": "git",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "url": "git+https://github.com/reprograma/ON15-TET-S10-Revisao-API.git"
 =======
     "url": "git+https://github.com/anaelisaq/ON15-TET-S10-Revisao-API.git"
 >>>>>>> 9b15933 (aula 28/05)
+=======
+    "url": "git+https://github.com/anaelisaq/ON15-TET-S10-Revisao-API.git"
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "url": "https://github.com/reprograma/ON15-TET-S10-Revisao-API/issues"
   },
@@ -28,6 +33,11 @@
   },
   "homepage": "https://github.com/anaelisaq/ON15-TET-S10-Revisao-API#readme",
 >>>>>>> 9b15933 (aula 28/05)
+=======
+    "url": "https://github.com/anaelisaq/ON15-TET-S10-Revisao-API/issues"
+  },
+  "homepage": "https://github.com/anaelisaq/ON15-TET-S10-Revisao-API#readme",
+>>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1"
