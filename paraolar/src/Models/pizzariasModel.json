@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "nome": "Donatello",
+        "endereço": "Avenida Emacipaçao, numero 70",
+        "contato" : "94325-6004",
+        "sabores": "calabresa, mussarela, palmito," 
+    },
+
+    {
+        "id": 2,
+        "nome": "Mania de pizza",
+        "endereço": "Rua das oliveiras, numero 230",
+        "contato" : "65434-9021",
+        "sabores": "frango, bauru, champignon," 
+
+    },
+
+{
+    "id": 3,
+    "nome": "Topissima",
+    "endereço": "Rua Vitoria regia, numero 34",
+    "contato" : "34578-4327",
+    "sabores": "portuguesa, lombo, catupiry,"
+},
+
+{
+    "id": 4,
+    "nome": "Mabi pizza",
+    "endereço": "Avenida dos codigos, numero 55",
+    "contato" : "95432-1234",
+    "sabores": "calabresa, mussarela, lombo," 
+},
+
+{
+    "id": 5,
+    "nome": "Pirapizza",
+    "endereço": "Rua nodestina, numero 432",
+    "contato" : "34215-9085",
+    "sabores": " mussarela, palmito, calabresa" 
+}
+
+]
