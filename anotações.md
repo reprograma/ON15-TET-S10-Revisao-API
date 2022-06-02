@@ -13,3 +13,11 @@ npm i -D nodemon || npm install nodemon --save-dev # para desistalar  npm uninst
 
 
 ```
+ordem de construção da api
+
+app.js > server.js > models > controllers > routes > app.js > fim
+
+json explicacao
+
+[] -> coleção de dados = varios recursos => uma lista de livros
+{} -> dados = um recurso => um livro
