@@ -96,13 +96,50 @@ const findOneEbookByTitle = (req, res) => {
 }
 
 const createEbook = (req, res) => {
-    const { title, paginas, author} = req.body
+    const { titulo, paginas, autor} = req.body
 
-    if (!title || title.trim()== "") throw new Error()
+    try {
+        const id =livrosModel.length
+
+        console.log(id)
+
+        const newEbook ={ id, titulo, paginas , autor }
+
+        console.log(newEbook)
+
+        livrosModel.push(newEbook)
+
+        console.table(livrosModel)
+
+        res.status(201).json(newEbook)
+
+    } catch (error) {
+        
+    }
+
+
+    try {
+        const id = livrosModel.length
+        const findEbookByTitle = livrosModel
+        .find(ebook => ebook.titulo.toLocaleLowerCase() == titulo.toLocaleLowerCase())
+        if (
+            findEbookByTitle &&
+            findEbookByTitle.autor.toLocaleLowerCase == autor.toLocaleLowerCase()
+        ){
+            throw{
+                statusCode: 409,
+                message: " Já existe um livro com mesmo titulo e autor",
+                details: " ja existe no sitema um livro com mesmo titulo e autor"
+            }
+    }} catch (error) {
+        
+    }
+    // if (!title || title.trim()== "") throw new Error()
 }
 
 module.exports = {
     findAllEbooks,
     findById,
-    findOneEbookByTitle
+    findOneEbookByTitle,
+    createEbook,
 }
