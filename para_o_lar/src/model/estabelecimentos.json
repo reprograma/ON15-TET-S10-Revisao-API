@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "Livraria Cultura",
+        "endereço": "Rua Geraldo Abdala",
+        "numero": 100,
+        "bairro": "centro",
+        "cidade": "Tangara",
+        "telefone": "4156-4452",
+        "pagamento": ["Dinheiro", "pix"],
+        "site" : "livrariacultura.com.br"
+    },
+
+    {
+        "id": 2,
+        "likes": 1,
+        "nome": "Rose Variedades",
+        "endereço": "Rua Geraldo Abdala",
+        "numero": 200,
+        "bairro": "Bubu",
+        "cidade": "Tangara",
+        "telefone": "4155-4452",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "rosevariedades.com.br"
+    }
+    
+]
