@@ -1,10 +1,18 @@
-const express = require("express");
-const cors = require("cors");
+// importar as dependencias
+const express = require('express');
+const cors = require('cors')
+const estabalecimentosRotas = require('./routes/estabelecimentosRoutes')
+
+// criar a api
 const app = express();
 
+// configurar a api
+app.use(express.json())
+app.use(cors())
 
-app.use(cors());
-app.use(express.json());
+// rotas
+//         path                  rotas
+app.use("/estabelecimentos", estabalecimentosRotas)
 
-
-module.exports = app;   
+// exporta ( deixa publica) a nossa api
+module.exports = app
