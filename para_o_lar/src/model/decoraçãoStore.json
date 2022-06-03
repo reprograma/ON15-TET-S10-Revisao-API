@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "nome": "Casa Decor",
+        "endereço": "Rua das Flores",
+        "numero": 600,
+        "bairro": "centro",
+        "cidade": "Paraíso",
+        "telefone": "4040-2272",
+        "pagamento": ["Dinheiro", "pix"],
+        "site" : "casadecor.com.br"
+    },
+
+    {
+        "id": 2,
+        "likes": 1,
+        "nome": "Belo Lar",
+        "endereço": "Rua dos Girassóis",
+        "numero": 401,
+        "bairro": "Santo Antônio",
+        "cidade": "Paraíso",
+        "telefone": "4045-3393",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "belolar.com.br"
+    },
+
+    
+    {
+        "id": 3,
+        "likes": 1,
+        "nome": "Redecora",
+        "endereço": "Rua das Rosas",
+        "numero": 505,
+        "bairro": "Santa Bárbara",
+        "cidade": "Paraíso",
+        "telefone": "4085-6643",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "redecora.com.br"
+    },
+
+
+    {
+        "id": 4,
+        "likes": 1,
+        "nome": "Art Decor",
+        "endereço": "Rua das Orquideas",
+        "numero": 107,
+        "bairro": "São Sebastião",
+        "cidade": "Paraíso",
+        "telefone": "4032-7193",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "artdecor.com.br"
+    },
+
+    {
+        "id": 5,
+        "likes": 1,
+        "nome": "Inova House",
+        "endereço": "Rua das Hortências",
+        "numero": 809,
+        "bairro": "Santa Helena",
+        "cidade": "Paraíso",
+        "telefone": "4080-5572",
+        "pagamento": ["Dinheiro", "cartao"],
+        "site" : "inovahouse.com.br"
+    },
+
+    {
+        "id": 6,
+        "likes": 1,
+        "nome": "Ideal Home",
+        "endereço": "Rua das Lirios",
+        "numero": 902,
+        "bairro": "Santa Maria",
+        "cidade": "Paraíso",
+        "telefone": "4060-4481",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "idealhome.com.br"
+    }
+
+
+]
+    

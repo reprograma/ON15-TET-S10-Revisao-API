@@ -11,15 +11,9 @@ const findAllEbooks = (req, res) => {
     try {
         let filterEbooks = livrosModel.slice()
 
-<<<<<<< HEAD
-        if (filterEbooks.length===0) {
-            return res.status(200).json({
-                message:  "Ainda não possuimos livros cadastrados em nossa biblioteca"
-=======
         if (filterEbooks.length === 0) {
             return res.status(200).json({
                 message: "Ainda não possuimos livros cadastrados em nossa biblioteca"
->>>>>>> 88ef611add02698e83ba4551e427f4f41ae66536
             })
         }
 
@@ -102,11 +96,6 @@ const findOneEbookByTitle = (req, res) => {
 }
 
 const createEbook = (req, res) => {
-<<<<<<< HEAD
-    const { title, paginas, author} = req.body
-
-    if (!title || title.trim()== "") throw new Error()
-=======
     const { titulo, paginas, autor } = req.body
 
     try {
@@ -147,16 +136,11 @@ const createEbook = (req, res) => {
         if (error.statusCode) res.status(error.statusCode).json(error)
         else res.status(500).json({ "message" : error.message })
     }
->>>>>>> 88ef611add02698e83ba4551e427f4f41ae66536
 }
 
 module.exports = {
     findAllEbooks,
     findById,
-<<<<<<< HEAD
-    findOneEbookByTitle
-=======
     findOneEbookByTitle,
     createEbook
->>>>>>> 88ef611add02698e83ba4551e427f4f41ae66536
 }
