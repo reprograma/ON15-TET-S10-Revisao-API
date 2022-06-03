@@ -1,6 +1,6 @@
-const app = require('./src/app');
-const PORT = 7050
+const app = require("./src/app");
+const PORT = 9051
 
 app.listen(PORT, ()=>{
-    console.log(`Alo doçura estou vivo na porta: ${PORT}`);
+    console.log(`Alô, douçura, estou ao vivo na porta: ${PORT}`);
 })
