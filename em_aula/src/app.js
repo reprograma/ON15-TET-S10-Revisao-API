@@ -1,7 +1,7 @@
 // importar as dependencias
 const express = require('express');
 const cors = require('cors')
-const livrosRotas = require('./routes/livroRotas')
+const livroRoutes = require('./routes/livroRoutes')
 
 // criar a api
 const app = express();
@@ -12,7 +12,7 @@ app.use(cors())
 
 // rotas
 //         path     rotas
-app.use("/livros", livrosRotas)
+app.use("/livros", livroRoutes)
 
 // exporta ( deixa publica) a nossa api
 module.exports = app

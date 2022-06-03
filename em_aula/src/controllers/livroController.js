@@ -6,12 +6,11 @@ const findAllEbooks = (req, res) => {
      * All -> todos
      * Ebooks -> recurso
      */
-    const { title = null, page = null, autor = null } = req.query
+    const{ title = null, page = null, autor = null } = req.query
 
     try {
         let filterEbooks = livrosModel.slice()
-
-        if (filterEbooks.length === 0) {
+        if(filterEbooks.length==0) {
             return res.status(200).json({
                 message: "Ainda não possuimos livros cadastrados em nossa biblioteca"
             })
@@ -22,7 +21,7 @@ const findAllEbooks = (req, res) => {
                 .autor
                 .toLocaleLowerCase()
                 .includes(autor.toLocaleLowerCase())
-            )
+            )            
         }
 
         if (title) {
@@ -33,8 +32,8 @@ const findAllEbooks = (req, res) => {
             )
         }
 
-        if (filterEbooks.length === 0) {
-            throw new Error("descupa, mas não foi encontrado nenhum resultado para essa busca")
+        if (filterEbooks.length === 0){
+            throw new Error("Desculpa, mas não foi encontrado nenhum resultado para essa busca")
         }
 
         res.status(200).json(filterEbooks)
@@ -45,18 +44,19 @@ const findAllEbooks = (req, res) => {
 
         res.status(404).json({
             message: error.message,
-            details: "query invalida: ",
+            details: "Não foi possível encontrar um resultado para essa query.",
             query: req.query
-        })
+        })        
     }
 }
 
+
 const findById = (req, res) => {
-    const { id } = req.params
+    const id = req.params.id
     // const findEbook = livrosModel[id] 
     try {
         const findEbook = livrosModel.find(ebook => ebook.id == id)// null | ebook
-
+        
         if (!findEbook) throw new Error(`desculpa, não foi possivel encontrar o livro com o id ${id}`)
 
         res.status(200).json(findEbook)
@@ -64,8 +64,33 @@ const findById = (req, res) => {
     } catch (error) {
         console.error(error)
         res.status(404).json({
-            message: "Poxa, desculpa, foi mal, ainda não possuimos esse livro no nosso catálago.",
-            details: error.message,
+            "message": "Poxa, desculpa, foi mal, ainda não possuimos esse livro no nosso catálago.",
+            "details": error.message,
+        })
+    }
+}
+
+const findOneEbookByAuthorName = (req, res) => {
+    // const req.query.authorName
+    // authorRequest
+    const { authorName } = req.query 
+
+    try {
+
+        if (!authorName) throw new Error("Nenhum parametro inserido para relizar a busca")
+
+        const findEbook = livrosModel.find(currentEbook => currentEbook.autor.toLocaleLowerCase() == authorName)
+
+        if (!findEbook) throw new Error(`desculpa, não foi possivel encontrar o livro com o autor ${authorName}`)
+
+        res.status(200).json(findEbook)
+
+    } catch (error) {
+        console.error(error)
+        res.status(404).json({
+            "message" : "desculpa, ainda não possuimos livros para esse autor",
+            "details" : error.message
+            
         })
     }
 }
@@ -99,30 +124,31 @@ const createEbook = (req, res) => {
     const { titulo, paginas, autor } = req.body
 
     try {
-
         const id = livrosModel.length
 
-        if (titulo === null || titulo === undefined || titulo.trim() == "") {
-            throw {
-                
-            }
+        if(titulo === null || titulo === undefined || titulo.trim() == "") {
+        throw{
+            statusCode: 400,
+            message: "Não pode ser criado, pois o título é requerido.", raw,
+            details: `O título recebido inválido foi: ${titulo}`
         }
+    }
 
-        const findEbookByTitle = livrosModel
-            .find(ebook => ebook.titulo.toLocaleLowerCase() == titulo.toLocaleLowerCase())
+        const findEbookByTitle = livrosModel.find(ebook => ebook.titulo.toLocaleLowerCase() ==titulo.toLocaleLowerCase())
 
-        if (
-            findEbookByTitle &&
-            findEbookByTitle.autor.toLocaleLowerCase() == autor.toLocaleLowerCase()
-        ) {
+        if(findEbookByTitle && findEbookByTitle.autor.toLocaleLowerCase() == autor.toLocaleLowerCase()) {
             throw {
                 statusCode: 409,
-                message: "Já existe um livro com o mesmo titulo e autor.",
-                details: "já existe no sistema um livro com o mesmo titulo e autor"
+                mensage: "Já existe um livro com o mesmo títlo e autor.",
+                details :"Já existe no sistema um livro com o mesmo título e autor."
             }
         }
 
-        const newEbook = { id, titulo, paginas, autor }
+        console.log(id)
+
+        const newEbook = {
+                id, titulo, paginas, autor
+        }
 
         console.log(newEbook)
 
@@ -133,14 +159,17 @@ const createEbook = (req, res) => {
         res.status(201).json(newEbook)
 
     } catch (error) {
-        if (error.statusCode) res.status(error.statusCode).json(error)
-        else res.status(500).json({ "message" : error.message })
+        if(error.statusCode) res.status(error.statusCode).json(error)
+        else res.status(500).json({"message" : error.message})
+        
     }
+
 }
 
 module.exports = {
     findAllEbooks,
     findById,
+    findOneEbookByAuthorName,
     findOneEbookByTitle,
     createEbook
 }
