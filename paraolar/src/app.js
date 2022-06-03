@@ -1,17 +1,14 @@
 const express = require("express");
-const cors = require ("cors")
+const cors = require ("cors");
 const pizzariaRoutes = require("./Routes/pizzariasRoutes");
-//Criar a API
-const app = express();
+// //Criar a API
+ const app = express();
 
 
-//Configurar API
-app.use(express.json())
-app.use(cors())
+// //Configurar API
+ app.use(express.json())
+ app.use(cors())
+ 
+ app.use("/pizzaria", pizzariaRoutes)
 
-//rotas
-app.use("/pizzarias", pizzariaRoutes)
-
-
-// exportar (deixa publica) a nossa api
-module.exports = app
+ module.exports = app

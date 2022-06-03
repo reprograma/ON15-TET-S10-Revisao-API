@@ -2,7 +2,6 @@ const app = require("./src/app") //chamando o arquivo app
 
 const PORT = 8182 // porta
 
-//inicia o servidor
-app.listen(PORT, ()=>{
-    console.log(` RODANDO NA PORTA ${PORT}`)
-})
+
+app.listen(8182, ()=>
+    console.log("servidor rodando lindo na porta 8182"))

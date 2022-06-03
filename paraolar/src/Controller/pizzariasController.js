@@ -1,81 +1,67 @@
-const { request, response } = require('../app')
-const pizzariasModels = require('../models/pizzariaModels.json')
 
-const getAllPizzarias = (req, res) => {
-    /**
-     * find -> encontrar
-     * All -> todos
-     * Ebooks -> recurso
-     */
-   res.status(200).json({
-       "message": "retornando todos as pizzarias",
-        "pizzarias": pizzariasModels
-   })
-}
+ const { response } = require('express')
+const { request } = require('../app')
+const pizzariasModels = require('../Models/pizzariasModel.json')
 
-const getById = (req, res) => {
-    const id = req.params.id
-    // const findPizzaria = pizzariasModels[id] 
-    try {
-        const findPizzarias pizzariasModels.find(pizzariasModels => pizzarias.id == id)// null | ebook
+
+ const getAllPizzarias = async (request, response) => {
+   
+    response.status(200).send(pizzariasModels)
+
+ }
+
+     const getById = async (request, response) => {
+      let idRequest = request.params.id  
+      let pizzariaEcontrada = pizzariasModels.find(pizzarias=> pizzarias.id== idRequest ) 
+      
+         response.status(200).send(pizzariaEcontrada)
+     }
+
+     const getByName = async(request, response) =>{
+     let nomeRequest = request.query.nome.toLowerCase()
+    let pizzariaPorNome = pizzariasModels.filter(pizzarias => pizzarias.nome.toLowerCase().includes(nomeRequest)) 
         
-        if (!findPizzarias) throw new Error(`desculpa, não foi possivel encontrar a pizzaria por id ${id}`)
+            response.status(200).send(pizzariaPorNome) 
+     }
 
-        res.status(200).json(findPizzarias)
+    const getByAdress = async (request, response) => {
+       let endereçoRequest = request.query.endereço.toLowerCase() 
+       let EnderecoPizzarias = pizzariasModels.filter(pizzarias => pizzarias.endereco.toLowerCase().includes(endereçoRequest))
 
-    } catch (error) {
-        res.status(404).json({
-            message: "Poxa, desculpa, foi mal, ainda não temos esse sabor em  nosso catálago.",
-            details: error.message,
-        })
+       response.status(200).send(EnderecoPizzarias)
     }
-}
+ 
+    const getByContact = async (request, request) => {
+        let contatoRequest = request.query.contato.toLowerCase()
+        let contatoPizzaria = pizzariasModels.filter(pizzarias => pizzarias.contato.toLowerCase().includes(contatoRequest))
 
-const getOneByName =(request, response) =>{
-    const {name} = request.query.name
-    try {
-        if(!name) throw new Error (" Nenhum parametro inserido para busca")
-        const findAllPizzarias = pizzariasModels.find(currentPizzarias => currentPizzarias.name ==name)
-        if(!findAllPizzarias) throw new Error ("desculpa, nao foi possivel encontrar essa pizzaria")
-    }catch (error) {
-
+        response.status(200).send(contatoPizzaria)
     }
-}
-
-const getByAdress = ( request , response) =>{
-    const {adress} = request.params.adress
-    try {
-        if(!adress) throw new Error ("Nenhum endereço encontrado")
-
-    } catch (error) {
-        
-    }
-}
+    
 
 const createPizzaria = async(request, response)=>{
-    let pizzariaModels = await Models()
+     let bodyRequest = request.body
 
-    let bodyRequest = request.body
-
-    let novaPizzaria = {
-        id: (pizzariaModels.length)+1, 
+     let novaPizzaria = {
+        id: (pizzariasModels.length)+1, 
         name: bodyRequest.name, 
-        endereço: bodyRequest.endereço,
-        contato :bodyRequest.contato,
-        sabores: bodyRequest.sabores
-    }
-    pizzariaModels.push(novaPizzaria)
+         endereço: bodyRequest.endereço,
+         contato :bodyRequest.contato,
+         sabores: bodyRequest.sabores
+     }
+     pizzariasModels.push(novaPizzaria)
     
-    response.status(201).send({
+     response.status(201).json({
         "mensagem": "pizzaria cadastrada com sucesso",
-        novaPizzaria
-    })
-}
-module.exports = {
-    getAllPizzarias,
-    getdById,
-    getOneByName,
-    getByAdress,
-    getByContacty,
-    createPizzaria
-}
+         novaPizzaria
+     })
+ }
+ module.exports = {
+     getAllPizzarias,
+     getById,
+     createPizzaria,
+     getByName,
+     getByAdress,
+    getByContact 
+
+ }
