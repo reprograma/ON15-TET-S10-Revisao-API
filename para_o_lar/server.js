@@ -1,6 +1,6 @@
 const app = require('./src/app');
-const PORT = 7050
+const PORT = 8090
 
 app.listen(PORT, () => {
-    console.log(`Vai na fé que dá certo, na porta: ${PORT}`);
+    console.log(`Vai na fé que dá certo né, na porta: ${PORT}`);
 })
