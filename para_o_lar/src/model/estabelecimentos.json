@@ -1,7 +1,6 @@
 [
     {
         "id": 1,
-        "likes": 1,
         "nome": "Livraria Cultura",
         "endereço": "Rua Geraldo Abdala",
         "numero": 100,
@@ -9,12 +8,11 @@
         "cidade": "Tangara",
         "telefone": "4156-4452",
         "pagamento": ["dinheiro", "pix"],
-        "site" : "livrariacultura.com.br"
+        "site": "livrariacultura.com.br"
     },
 
     {
         "id": 2,
-        "likes": 1,
         "nome": "Rose Variedades",
         "endereço": "Rua Geraldo Abdala",
         "numero": 200,
@@ -22,12 +20,11 @@
         "cidade": "Tangara",
         "telefone": "4155-4452",
         "pagamento": ["dinheiro", "cartao", "pix"],
-        "site" : "rosevariedades.com.br"
+        "site": "rosevariedades.com.br"
     },
 
     {
         "id": 3,
-        "likes": 1,
         "nome": "She-in",
         "endereço": "Rua Geraldo Abdala",
         "numero": 300,
@@ -35,12 +32,11 @@
         "cidade": "Tangara",
         "telefone": "4155-4452",
         "pagamento": ["cartao", "pix", "boleto"],
-        "site" : "shein.com"
+        "site": "shein.com"
     },
 
     {
         "id": 4,
-        "likes": 1,
         "nome": "Mercado das Pulgas",
         "endereço": "Rua Geraldo Abdala",
         "numero": 400,
@@ -48,12 +44,11 @@
         "cidade": "Tangara",
         "telefone": "4155-4452",
         "pagamento": ["dinheiro", "cartao", "pix", "boleto"],
-        "site" : "mercado-pulgas.com.br"
+        "site": "mercado-pulgas.com.br"
     },
 
     {
         "id": 5,
-        "likes": 1,
         "nome": "Pesque e pague",
         "endereço": "Rua Geraldo Abdala",
         "numero": 500,
@@ -61,12 +56,11 @@
         "cidade": "Tangara",
         "telefone": "4155-4452",
         "pagamento": ["dinheiro", "pix"],
-        "site" : "pesquepague.com.br"
+        "site": "pesquepague.com.br"
     },
 
     {
         "id": 6,
-        "likes": 1,
         "nome": "Mercado 550",
         "endereço": "Rua Geraldo Abdala",
         "numero": 550,
@@ -74,12 +68,11 @@
         "cidade": "Tangara",
         "telefone": "4155-4452",
         "pagamento": ["dinheiro", "cartao", "pix"],
-        "site" : "mercado550.com.br"
+        "site": "mercado550.com.br"
     },
 
     {
         "id": 7,
-        "likes": 1,
         "nome": "Mundo Verde",
         "endereço": "Rua Geraldo Abdala",
         "numero": 777,
@@ -87,7 +80,7 @@
         "cidade": "Tangara",
         "telefone": "4155-4452",
         "pagamento": ["dinheiro", "cartao", "pix", "boleto"],
-        "site" : "mundoverde.com"
+        "site": "mundoverde.com"
     }
     
 ]
