@@ -1,8 +1,8 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "likes" : true,
-        "dislike" : true,
+        "dislikes" : true,
         "store": "Sabor do Bonfim" ,
         "type" : ["restaurante", "pizzaria"],
         "neighborhood" : "Carmo",
@@ -12,9 +12,9 @@
         "site" : "https://sabordobonfimpizzabar.negocio.site/"
     },
     {
-        "id": 1,
+        "id": 2,
         "likes" : true,
-        "dislike" : true,
+        "dislikes" : true,
         "store": "Tô em casa",
         "type" :  "restaurante",
         "neighborhood" : "Carmo",
@@ -25,9 +25,9 @@
     
     },
     {
-        "id": 2,
+        "id": 3,
         "likes" : true,
-        "dislike" : true,
+        "dislikes" : true,
         "store": "Bodega do véio",
         "type" : ["restaurante", "bar"],
         "neighborhood" : "Amparo",
@@ -37,9 +37,9 @@
         "site" : "https://www.instagram.com/bodegadeveioolinda/"
     },
     {
-        "id": 3,
+        "id": 4,
         "likes" : true,
-        "dislike" : true,
+        "dislikes" : true,
         "store": "Casa Balea",
         "type" : ["artes", "bar"],
         "neighborhood" : "Carmo",
@@ -49,9 +49,9 @@
         "site" : "https://www.instagram.com/casabalea/"
     },
     {
-        "id": 4,
+        "id": 5,
         "likes" : true,
-        "dislike" : true,
+        "dislikes" : true,
         "store": "Cavalote",
         "type" : ["cervejaria artesanal", "bar", "pub"],
         "neighborhood" : "Carmo",
@@ -62,9 +62,9 @@
     },  
 
     {
-        "id": 5,
+        "id": 6,
         "likes" : true,
-        "dislike" : true,
+        "dislikes" : true,
         "store": "Bar do Amparo",
         "type" : ["Restaurante", "bar"],
         "neighborhood" : "Amparo",
