@@ -1,10 +1,20 @@
-const express = require("express");
-const cors = require("cors");
+//importar dependências
+const express = require('express');
+const cors = require('cors');
+const lojasRoutes = require('./routes/lojasRoutes');
+
+// criar a api
 const app = express();
 
-
-app.use(cors());
+//configurar a api
 app.use(express.json());
+app.use(cors());
 
+//rotas
+//         path    rotas
+app.use("/lojas", lojasRoutes)
 
-module.exports = app;   
+//exportar a api
+module.exports = app;
+
+//OK!

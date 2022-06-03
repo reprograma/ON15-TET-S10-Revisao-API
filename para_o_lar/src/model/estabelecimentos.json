@@ -2,27 +2,41 @@
     {
         "id": 1,
         "likes": 1,
-        "nome": "Livraria Cultura",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 100,
-        "bairro": "centro",
-        "cidade": "Tangara",
-        "telefone": "4156-4452",
-        "pagamento": ["Dinheiro", "pix"],
-        "site" : "livrariacultura.com.br"
+        "nome": "Livraria Pedro I",
+        "endereço": "Av. Treze de Maio",
+        "numero": 429,
+        "bairro": "Fatima",
+        "cidade": "Fortaleza",
+        "telefone": "3037-5660",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "não possui"
     },
 
     {
         "id": 2,
-        "likes": 1,
-        "nome": "Rose Variedades",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 200,
-        "bairro": "Bubu",
-        "cidade": "Tangara",
-        "telefone": "4155-4452",
+        "likes": 2,
+        "nome": "Livraria Leitura",
+        "endereço": "Shopping Del Paseo, Av. Santos Dumont",
+        "numero": 3131,
+        "bairro": "Aldeota",
+        "cidade": "Fortaleza",
+        "telefone": "3458-0300",
         "pagamento": ["Dinheiro", "cartao", "pix"],
-        "site" : "rosevariedades.com.br"
+        "site" : "leitura.com.br"
+    },
+
+    {
+        "id": 3,
+        "likes": 1,
+        "nome": "Livraria Lamarca",
+        "endereço": "Av. da Universidade",
+        "numero": 2475,
+        "bairro": "Benfica",
+        "cidade": "Fortaleza",
+        "telefone": "98614-4125",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "não possui"
     }
+
     
 ]
