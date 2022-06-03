@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "likes": 1,
+        "likes": 10,
         "nome": "Livraria Cultura",
         "endereço": "Rua Geraldo Abdala",
         "numero": 100,
@@ -14,7 +14,7 @@
 
     {
         "id": 2,
-        "likes": 1,
+        "likes": 25,
         "nome": "Rose Variedades",
         "endereço": "Rua Geraldo Abdala",
         "numero": 200,
@@ -23,6 +23,32 @@
         "telefone": "4155-4452",
         "pagamento": ["Dinheiro", "cartao", "pix"],
         "site" : "rosevariedades.com.br"
-    }
+    },
     
+
+    {
+        "id": 3,
+        "likes": 50,
+        "nome": "VinnisBurguer",
+        "endereço": "Rua da custórdia",
+        "numero": 342,
+        "bairro": "Vasco da Gama",
+        "cidade": "Recife",
+        "telefone": "1223-4565",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "vinnisburguer.com.br"
+    },
+
+    {
+        "id": 4,
+        "likes": 100,
+        "nome": "GS Kabelus",
+        "endereço": "Rua Mariapólis",
+        "numero": 125,
+        "bairro": "Afogados",
+        "cidade": "Recife",
+        "telefone": "3124-5258",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "GSKabelos.com.br"
+    }
 ]
