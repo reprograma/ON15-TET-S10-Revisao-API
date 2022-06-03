@@ -1,11 +1,12 @@
+const express  =  require ( "express" ) 
+const cors  =  require ( "cors" ) 
+const shopsRoutes = require("./routes/shopsRoutes") 
 
-const  express  =  require ( "express" ) ;
-const  cors  =  require ( "cors" ) ;
-const  app  =  express ( ) ;
+const  app  =  express ( ) 
 
+app . use ( cors ( ) ) 
+app . use ( express.json ( ) ) 
 
-aplicativo . use ( cors ( ) ) ;
-aplicativo . use ( express.json ( ) ) ; _ _
+app.use("/lojas", shopsRoutes)
 
-
-módulo . exportações  =  aplicativo ;   
+module.exports = app 

@@ -2,7 +2,7 @@
 const express = require('express')
 
 // preciso da controller
-const controller = require('../controllers/livroController')
+const controller = require('../controllers/livrosController')
 
 // nossas rotas
 const router = express.Router()
@@ -12,6 +12,6 @@ const router = express.Router()
 /**
  * /biblioteca -> endpoint
  */
-router.get('/biblioteca',      controller.findAllEbooks)
+router.get('/biblioteca',     controller.findAllEbooks)
 
 module.exports = router 

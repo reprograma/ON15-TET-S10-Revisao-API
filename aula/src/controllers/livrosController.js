@@ -1,4 +1,4 @@
-const livrosModel = require('../models/livrosModels.json')
+const livrosModel = require('../models/livrosModels')
 
 const findAllEbooks = (req, res) => {
     /**
@@ -8,7 +8,7 @@ const findAllEbooks = (req, res) => {
      */
    res.status(200).json({
        "message": "retornando todos os livros",
-        "livros": livrosModel
+       "livros": livrosModel
    })
 }
 
@@ -32,4 +32,5 @@ const findById = (req, res) => {
 
 module.exports = {
     findAllEbooks,
+    findById
 }
