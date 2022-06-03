@@ -2,7 +2,8 @@ const restaurantesModel = require("../models/restaurantesModels.json");
 
 const findAllRestaurants = (request, response) => {
 
-    const { name = null, stars = null, specialty = null, serviceType = null, deliveryTime = null, paymentOptions = null, deliveryFee = null, description = null } = request.query
+    const { name = null, stars = null, specialty = null, serviceType = null, deliveryTime = null, paymentOptions = null, 
+            deliveryFee = null, description = null } = request.query
 
     try {
         let filterRestaurants = restaurantesModel.slice();
@@ -845,7 +846,8 @@ const getAllWithPaymentOptions = (request, response) => {
             };
 
             if (paymentOptions && name) {
-                if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) && pagamentos.toString().toLocaleLowerCase().includes(paymentOptions.toLocaleLowerCase())) {
+                if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) 
+                && pagamentos.toString().toLocaleLowerCase().includes(paymentOptions.toLocaleLowerCase())) {
                     payment.push({
                         "Nome": nomes,
                         "Opções de pagamento": pagamentos
