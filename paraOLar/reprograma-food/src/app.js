@@ -7,6 +7,6 @@ app.use(cors());
 
 const restauranteRoutes = require("./routes/restaurantesRoutes.js");
 
-app.use("/restaurantes", restauranteRoutes)
+app.use("/restaurantes", restauranteRoutes);
 
 module.exports = app

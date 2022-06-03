@@ -5,13 +5,13 @@ const findAllRestaurants = (request, response) => {
     const { name = null, stars = null, specialty = null, serviceType = null, deliveryTime = null, paymentOptions = null, deliveryFee = null, description = null } = request.query
 
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         if (filterRestaurants.length === 0) {
             return response.status(200).json({
                 message: "Ainda não possuímos restaurantes cadastrados em nosso sistema."
             })
-        }
+        };
 
         if (name) {
             filterRestaurants = filterRestaurants.filter(currentRestaurant => currentRestaurant
@@ -19,7 +19,7 @@ const findAllRestaurants = (request, response) => {
                 .toLocaleLowerCase()
                 .includes(name.toLocaleLowerCase())
             )
-        }
+        };
 
 
         if (stars) {
@@ -27,7 +27,7 @@ const findAllRestaurants = (request, response) => {
                 .estrelas >= stars
 
             )
-        }
+        };
 
         if (specialty) {
             filterRestaurants = filterRestaurants.filter(currentRestaurant => currentRestaurant
@@ -36,7 +36,7 @@ const findAllRestaurants = (request, response) => {
                 .toLocaleLowerCase()
                 .includes(specialty.toLocaleLowerCase())
             )
-        }
+        };
 
         if (serviceType) {
             filterRestaurants = filterRestaurants.filter(currentRestaurant => currentRestaurant
@@ -45,14 +45,14 @@ const findAllRestaurants = (request, response) => {
                 .toLocaleLowerCase()
                 .includes(serviceType.toLocaleLowerCase())
             )
-        }
+        };
 
         if (deliveryTime) {
             filterRestaurants = filterRestaurants.filter(currentRestaurant => currentRestaurant
                 .tempoDeEntrega <= deliveryTime
 
             )
-        }
+        };
 
         if (paymentOptions) {
             filterRestaurants = filterRestaurants.filter(currentRestaurant => currentRestaurant
@@ -61,7 +61,7 @@ const findAllRestaurants = (request, response) => {
                 .toLocaleLowerCase()
                 .includes(paymentOptions.toLocaleLowerCase())
             )
-        }
+        };
 
 
         if (deliveryFee) {
@@ -69,7 +69,7 @@ const findAllRestaurants = (request, response) => {
                 .taxaDeEntrega <= deliveryFee
 
             )
-        }
+        };
 
         if (description) {
             filterRestaurants = filterRestaurants.filter(currentRestaurant => currentRestaurant
@@ -78,11 +78,11 @@ const findAllRestaurants = (request, response) => {
                 .includes(description.toLocaleLowerCase())
 
             )
-        }
+        };
 
         if (filterRestaurants.length === 0) {
             throw new Error("Não foi possível encontrar resultados com a busca realizada")
-        }
+        };
 
         response.status(200).json({
             "Busca por:": request.query,
@@ -90,44 +90,43 @@ const findAllRestaurants = (request, response) => {
             "Lista de restaurantes": filterRestaurants
         });
 
-    }
-    catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+    } catch (error) {
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         response.status(404).json({
             message: error.message,
             details: "busca inválida:",
             query: request.query
-        })
+        });
     }
 
-}
+};
 
 const findById = (request, response) => {
     const { id } = request.params
 
     try {
-        const findRestaurants = restaurantesModel.find(restaurant => restaurant.id == id)
+        const findRestaurants = restaurantesModel.find(restaurant => restaurant.id == id);
 
-        if (!findRestaurants) throw new Error(`Oh não! Não encontramos restaurantes com o id: ${id}`)
+        if (!findRestaurants) throw new Error(`Oh não! Não encontramos restaurantes com o id: ${id}`);
 
-        response.status(200).json({ "Restaurante encontrado": findRestaurants })
+        response.status(200).json({ "Restaurante encontrado": findRestaurants });
 
     } catch (error) {
         console.error(error)
         response.status(404).json({
             message: "Ainda não possuímos esse restaurante cadastrado em nosso sistema.",
             details: error.message,
-        })
+        });
     }
-}
+};
 
 const findByName = (request, response) => {
     const { name = null } = request.query
 
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         if (name) {
             filterRestaurants = filterRestaurants.filter(currentRestaurant => currentRestaurant
@@ -135,11 +134,11 @@ const findByName = (request, response) => {
                 .toLocaleLowerCase()
                 .includes(name.toLocaleLowerCase())
             )
-        }
+        };
 
         if (filterRestaurants.length === 0) {
-            throw new Error("Não foi possível encontrar resultados com a busca realizada")
-        }
+            throw new Error("Não foi possível encontrar resultados com a busca realizada");
+        };
 
         response.status(200).json({
             "Busca por:": request.query,
@@ -148,22 +147,22 @@ const findByName = (request, response) => {
         });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         response.status(404).json({
             message: error.message,
             details: "busca inválida:",
             query: request.query
-        })
+        });
     }
-}
+};
 
 const organizeAllByStar = (request, response) => {
     const { stars = null, name = null } = request.query
 
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         filterRestaurants.sort(function (a, b) {
             if (a.estrelas < b.estrelas) {
@@ -185,66 +184,65 @@ const organizeAllByStar = (request, response) => {
                 restaurantStars.push({
                     "Nome": nomes,
                     "Estrelas": estrela.toFixed(1)
-                })
+                });
+
             } if (name && stars) {
                 if (nomes.toLocaleLowerCase().includes(name.toLocaleLowerCase()) && estrela >= stars) {
                     restaurantStars.push({
                         "Nome": nomes,
                         "Estrelas": estrela.toFixed(1)
-                    })
-                }
+                    });
+                };
 
             } if (name && !stars) {
                 if (nomes.toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     restaurantStars.push({
                         "Nome": nomes,
                         "Estrelas": estrela.toFixed(1)
-                    })
-                }
-            }
+                    });
+                };
+            };
 
             if (stars && !name) {
                 if (estrela >= stars) {
                     restaurantStars.push({
                         "Nome": nomes,
                         "Estrelas": estrela.toFixed(1)
-                    })
-                }
-            }
+                    });
+                };
+            };
 
-
-
-        }
+        };
 
         if (restaurantStars.length === 0) {
             throw new Error("Não foi possível encontrar resultados com a busca realizada")
-        }
+        };
 
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": restaurantStars.length,
             "Restaurantes ordenados por estrela": restaurantStars
-        })
+        });
 
 
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         response.status(404).json({
             message: error.message,
             details: "busca inválida:",
             query: request.query
-        })
+        });
     }
-}
+};
 
 const getAllWithDescription = (request, response) => {
     const { description = null, name = null } = request.query
 
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         let allAbout = []
         for (let i = 0; i < filterRestaurants.length; i++) {
@@ -255,33 +253,36 @@ const getAllWithDescription = (request, response) => {
                 allAbout.push({
                     "nome": nomes,
                     "sobre": descricao
-                })
+                });
             }
+
             if (description && name) {
-                if (descricao.toLocaleLowerCase().includes(description.toLocaleLowerCase()) && nomes.toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
+                if (descricao.toLocaleLowerCase().includes(description.toLocaleLowerCase())
+                    && nomes.toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     allAbout.push({
                         "nome": nomes,
                         "sobre": descricao
-                    })
-                }
-            }
+                    });
+                };
+            };
+
             if (description && !name) {
                 if (descricao.toLocaleLowerCase().includes(description.toLocaleLowerCase())) {
                     allAbout.push({
                         "nome": nomes,
                         "sobre": descricao
-                    })
-                }
+                    });
+                };
 
             } if (name && !description) {
                 if (nomes.toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     allAbout.push({
                         "nome": nomes,
                         "sobre": descricao
-                    })
-                }
-            }
-        }
+                    });
+                };
+            };
+        };
 
         if (allAbout.length === 0) {
             throw {
@@ -289,36 +290,37 @@ const getAllWithDescription = (request, response) => {
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": allAbout.length,
             "Lista de restaurantes": allAbout
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
+            response.status(error.statusCode).json(error);
         }
         else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
+                });
+            };
+        };
+    };
 
-}
+};
 
 const getAllWithPhone = (request, response) => {
     const { name = null } = request.query
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         let telefones = []
         for (let i = 0; i < filterRestaurants.length; i++) {
@@ -330,15 +332,16 @@ const getAllWithPhone = (request, response) => {
                     telefones.push({
                         "Nome": nomes,
                         "Telefone": telefone
-                    })
-                }
+                    });
+                };
+
             } else {
                 telefones.push({
                     "Nome": nomes,
                     "Telefone": telefone
-                })
-            }
-        }
+                });
+            };
+        };
 
         if (telefones.length === 0) {
             throw {
@@ -346,35 +349,36 @@ const getAllWithPhone = (request, response) => {
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": telefones.length,
             "Lista de restaurantes": telefones
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
+            response.status(error.statusCode).json(error);
         }
         else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
-}
+                });
+            };
+        };
+    };
+};
 
 const getAllWithAdress = (request, response) => {
     const { name = null } = request.query
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         let adresses = []
 
@@ -387,15 +391,16 @@ const getAllWithAdress = (request, response) => {
                     adresses.push({
                         "Nome": nomes,
                         "Endereço": enderecos
-                    })
-                }
+                    });
+                };
+
             } else {
                 adresses.push({
                     "Nome": nomes,
                     "Endereço": enderecos
-                })
-            }
-        }
+                });
+            };
+        };
 
         if (adresses.length === 0) {
             throw {
@@ -403,36 +408,37 @@ const getAllWithAdress = (request, response) => {
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": adresses.length,
             "Lista de restaurantes": adresses
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
-        }
-        else {
+            response.status(error.statusCode).json(error);
+
+        } else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
-}
+                });
+            };
+        };
+    };
+};
 
 
 const getAllWithSpecialty = (request, response) => {
     const { specialty = null, name = null } = request.query
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         let specialties = []
 
@@ -444,15 +450,19 @@ const getAllWithSpecialty = (request, response) => {
                 specialties.push({
                     "Nome": nomes,
                     "Especialidades": especiais
-                })
+                });
+
             } if (specialty && name) {
-                if (especiais.toString().toLocaleLowerCase().includes(specialty.toLocaleLowerCase()) && nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
+                if (especiais.toString().toLocaleLowerCase().includes(specialty.toLocaleLowerCase())
+                    && nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
+
                     specialties.push({
                         "Nome": nomes,
                         "Especialidades": especiais
-                    })
-                }
-            }
+                    });
+                };
+            };
+
             if (specialty && !name) {
                 if (especiais.toString().toLocaleLowerCase().includes(specialty.toLocaleLowerCase())) {
                     specialties.push({
@@ -467,45 +477,48 @@ const getAllWithSpecialty = (request, response) => {
                     specialties.push({
                         "Nome": nomes,
                         "Especialidades": especiais
-                    })
-                }
+                    });
+                };
 
-            }
-        }
+            };
+        };
+
         if (specialties.length === 0) {
             throw {
                 statusCode: 404,
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": specialties.length,
             "Lista de restaurantes": specialties
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
+            response.status(error.statusCode).json(error);
         }
         else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
-}
+                });
+            };
+        };
+    };
+};
+
 const getAllWithServiceType = (request, response) => {
     const { serviceType = null, name = null } = request.query
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         let services = []
 
@@ -517,69 +530,77 @@ const getAllWithServiceType = (request, response) => {
                 services.push({
                     "Nome": nomes,
                     "Tipos de serviço": servicos
-                })
-            } if (serviceType && name) {
-                if (servicos.toString().toLocaleLowerCase().includes(serviceType.toLocaleLowerCase()) && nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
+                });
+
+            }
+
+            if (serviceType && name) {
+                if (servicos.toString().toLocaleLowerCase().includes(serviceType.toLocaleLowerCase())
+                    && nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
+
                     services.push({
                         "Nome": nomes,
                         "Tipos de serviço": servicos
-                    })
-                }
-            }
+                    });
+                };
+            };
+
             if (serviceType && !name) {
                 if (servicos.toString().toLocaleLowerCase().includes(serviceType.toLocaleLowerCase())) {
                     services.push({
                         "Nome": nomes,
                         "Tipos de serviço": servicos
-                    })
-                }
-            }
+                    });
+                };
+            };
 
             if (!serviceType && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     services.push({
                         "Nome": nomes,
                         "Tipos de serviço": servicos
-                    })
-                }
+                    });
+                };
 
-            }
-        }
+            };
+        };
+
         if (services.length === 0) {
             throw {
                 statusCode: 404,
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": services.length,
             "Lista de restaurantes": services
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
-        }
-        else {
+            response.status(error.statusCode).json(error);
+
+        } else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
-}
+                });
+            };
+        };
+    };
+};
 
 const getAllWithOpeningHours = (request, response) => {
     const { openingHours = null, closingHours = null, name = null } = request.query
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
 
         let hours = []
@@ -595,19 +616,21 @@ const getAllWithOpeningHours = (request, response) => {
                         "abertura": horarios.abertura.toFixed(2).replace(".", ":"),
                         "fechamento": horarios.fechamento.toFixed(2).replace(".", ":")
                     }
-                })
-            }
+                });
+            };
 
             if (openingHours && closingHours && name) {
-                if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) && horarios.fechamento <= closingHours && horarios.abertura <= openingHours)
+                if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())
+                    && horarios.fechamento <= closingHours && horarios.abertura <= openingHours)
+
                     hours.push({
                         "Nome": nomes,
                         "Horário de funcionamento": {
                             "abertura": horarios.abertura.toFixed(2).replace(".", ":"),
                             "fechamento": horarios.fechamento.toFixed(2).replace(".", ":")
                         }
-                    })
-            }
+                    });
+            };
 
             if (openingHours && closingHours && !name) {
                 if (horarios.fechamento <= closingHours && horarios.abertura <= openingHours)
@@ -617,8 +640,8 @@ const getAllWithOpeningHours = (request, response) => {
                             "abertura": horarios.abertura.toFixed(2).replace(".", ":"),
                             "fechamento": horarios.fechamento.toFixed(2).replace(".", ":")
                         }
-                    })
-            }
+                    });
+            };
 
             if (openingHours && !closingHours && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) && horarios.abertura <= openingHours)
@@ -628,8 +651,8 @@ const getAllWithOpeningHours = (request, response) => {
                             "abertura": horarios.abertura.toFixed(2).replace(".", ":"),
                             "fechamento": horarios.fechamento.toFixed(2).replace(".", ":")
                         }
-                    })
-            }
+                    });
+            };
 
             if (!openingHours && closingHours && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) && horarios.fechamento <= closingHours)
@@ -639,8 +662,9 @@ const getAllWithOpeningHours = (request, response) => {
                             "abertura": horarios.abertura.toFixed(2).replace(".", ":"),
                             "fechamento": horarios.fechamento.toFixed(2).replace(".", ":")
                         }
-                    })
-            }
+                    });
+            };
+
             if (openingHours && !closingHours && !name) {
                 if (horarios.abertura <= openingHours)
                     hours.push({
@@ -649,8 +673,8 @@ const getAllWithOpeningHours = (request, response) => {
                             "abertura": horarios.abertura.toFixed(2).replace(".", ":"),
                             "fechamento": horarios.fechamento.toFixed(2).replace(".", ":")
                         }
-                    })
-            }
+                    });
+            };
 
             if (!openingHours && closingHours && !name) {
                 if (horarios.fechamento <= closingHours)
@@ -660,8 +684,8 @@ const getAllWithOpeningHours = (request, response) => {
                             "abertura": horarios.abertura.toFixed(2).replace(".", ":"),
                             "fechamento": horarios.fechamento.toFixed(2).replace(".", ":")
                         }
-                    })
-            }
+                    });
+            };
 
             if (!openingHours && !closingHours && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()))
@@ -671,9 +695,9 @@ const getAllWithOpeningHours = (request, response) => {
                             "abertura": horarios.abertura.toFixed(2).replace(".", ":"),
                             "fechamento": horarios.fechamento.toFixed(2).replace(".", ":")
                         }
-                    })
-            }
-        }
+                    });
+            };
+        };
 
         if (hours.length === 0) {
             throw {
@@ -681,31 +705,32 @@ const getAllWithOpeningHours = (request, response) => {
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": hours.length,
             "Lista de restaurantes": hours
-        })
+        });
 
     } catch (error) {
-        console.error(error)
+        console.error(error);
         console.log("busca recebida: ", request.query)
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
-        }
-        else {
+            response.status(error.statusCode).json(error);
+
+        } else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
+                });
+            };
+        };
+    };
 
-}
+};
 
 const organizeAllByDeliveryTime = (request, response) => {
     const { deliveryTime = null, name = null } = request.query
@@ -734,41 +759,39 @@ const organizeAllByDeliveryTime = (request, response) => {
                 time.push({
                     "Nome": nomes,
                     "Tempo de entrega": tempos + " minutos"
-                })
-            }
+                });
+            };
 
             if (deliveryTime && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) && tempos <= deliveryTime) {
                     time.push({
                         "Nome": nomes,
                         "Tempo de entrega": tempos + " minutos"
-                    })
+                    });
 
-                }
-            }
+                };
+            };
 
             if (deliveryTime && !name) {
                 if (tempos <= deliveryTime) {
                     time.push({
                         "Nome": nomes,
                         "Tempo de entrega": tempos + " minutos"
-                    })
-
-                }
-            }
+                    });
+                };
+            };
 
             if (!deliveryTime && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     time.push({
                         "Nome": nomes,
                         "Tempo de entrega": tempos + " minutos"
-                    })
+                    });
 
-                }
-            }
+                };
+            };
 
-
-        }
+        };
 
         if (time.length === 0) {
             throw {
@@ -776,36 +799,36 @@ const organizeAllByDeliveryTime = (request, response) => {
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": time.length,
             "Lista de restaurantes": time
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
-        }
-        else {
+            response.status(error.statusCode).json(error);
+
+        } else {
             {
                 response.status(500).json({
                     message: error.message
                 })
-            }
-        }
-    }
-
-}
+            };
+        };
+    };
+};
 
 const getAllWithPaymentOptions = (request, response) => {
     const { paymentOptions = null, name = null } = request.query
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         let payment = []
 
@@ -818,40 +841,36 @@ const getAllWithPaymentOptions = (request, response) => {
                 payment.push({
                     "Nome": nomes,
                     "Opções de pagamento": pagamentos
-                })
-            }
+                });
+            };
 
             if (paymentOptions && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) && pagamentos.toString().toLocaleLowerCase().includes(paymentOptions.toLocaleLowerCase())) {
                     payment.push({
                         "Nome": nomes,
                         "Opções de pagamento": pagamentos
-                    })
-
-                }
-            }
+                    });
+                };
+            };
 
             if (paymentOptions && !name) {
                 if (pagamentos.toString().toLocaleLowerCase().includes(paymentOptions.toLocaleLowerCase())) {
                     payment.push({
                         "Nome": nomes,
                         "Opções de pagamento": pagamentos
-                    })
-
-                }
-            }
+                    });
+                };
+            };
 
             if (!paymentOptions && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     payment.push({
                         "Nome": nomes,
                         "Opções de pagamento": pagamentos
-                    })
-
-                }
-            }
-
-        }
+                    });
+                };
+            };
+        };
 
         if (payment.length === 0) {
             throw {
@@ -859,36 +878,37 @@ const getAllWithPaymentOptions = (request, response) => {
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": payment.length,
             "Lista de restaurantes": payment
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
+            response.status(error.statusCode).json(error);
         }
         else {
             {
                 response.status(500).json({
                     message: error.message
                 })
-            }
-        }
-    }
-}
+            };
+        };
+    };
+};
 
 const showAllMenus = (request, response) => {
     const { dish = null, ingredients = null, name = null } = request.query
 
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
 
         let menu = []
@@ -902,19 +922,21 @@ const showAllMenus = (request, response) => {
                 menu.push({
                     "Nome": nomes,
                     "cardápio": cardapios
-                })
+                });
 
-            }
+            };
 
             if (!dish && name && !ingredients) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     menu.push({
                         "Nome": nomes,
                         "cardápio": cardapios
-                    })
+                    });
 
-                }
-            }
+                };
+            };
+
+
             for (let j = 0; j < cardapios.length; j++) {
 
 
@@ -925,104 +947,103 @@ const showAllMenus = (request, response) => {
                     if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())
                         && pratos.toString().toLocaleLowerCase().includes(dish.toLocaleLowerCase())
                         && ingredientes.toString().toLocaleLowerCase().includes(ingredients.toLocaleLowerCase())) {
+
                         menu.push({
                             "Nome": nomes,
                             "cardápio": cardapios[j]
-                        })
-
-                    }
-                }
+                        });
+                    };
+                };
 
                 if (dish && !name && ingredients) {
                     if (pratos.toString().toLocaleLowerCase().includes(dish.toLocaleLowerCase())
                         && ingredientes.toString().toLocaleLowerCase().includes(ingredients.toLocaleLowerCase())) {
+
                         menu.push({
                             "Nome": nomes,
                             "cardápio": cardapios[j]
-                        })
-
-                    }
-                }
+                        });
+                    };
+                };
 
                 if (dish && name && !ingredients) {
                     if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())
                         && pratos.toString().toLocaleLowerCase().includes(dish.toLocaleLowerCase())) {
+
                         menu.push({
                             "Nome": nomes,
                             "cardápio": cardapios[j]
-                        })
-
-                    }
-                }
+                        });
+                    };
+                };
 
                 if (!dish && name && ingredients) {
                     if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())
                         && ingredientes.toString().toLocaleLowerCase().includes(ingredients.toLocaleLowerCase())) {
+
                         menu.push({
                             "Nome": nomes,
                             "cardápio": cardapios[j]
-                        })
-
-                    }
-                }
+                        });
+                    };
+                };
 
                 if (dish && !name && !ingredients) {
                     if (pratos.toString().toLocaleLowerCase().includes(dish.toLocaleLowerCase())) {
                         menu.push({
                             "Nome": nomes,
                             "cardápio": cardapios[j]
-                        })
+                        });
+                    };
+                };
 
-                    }
-                }
                 if (!dish && !name && ingredients) {
                     if (ingredientes.toString().toLocaleLowerCase().includes(ingredients.toLocaleLowerCase())) {
                         menu.push({
                             "Nome": nomes,
                             "cardápio": cardapios[j]
-                        })
+                        });
+                    };
+                };
+            };
+        };
 
-                    }
-
-                }
-
-            }
-        }
         if (menu.length === 0) {
             throw {
                 statusCode: 404,
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Lista de restaurantes": menu
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
-        }
-        else {
+            response.status(error.statusCode).json(error);
+
+        } else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
-}
+                });
+            };
+        };
+    };
+};
 
 const findAllByPriceAverage = (request, response) => {
     const { price = null, name = null } = request.query
     try {
 
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         let prices = []
         let restaurantsAverage = []
@@ -1034,14 +1055,16 @@ const findAllByPriceAverage = (request, response) => {
             for (let j = 0; j < cardapios.length; j++) {
                 let preco = cardapios[j].preco
 
-                itens.push(preco)
+                itens.push(preco);
             }
+
             prices.push({
                 "nome": nomes,
                 "valores": itens
-            })
+            });
 
-        }
+        };
+
         for (i = 0; i < prices.length; i++) {
             let nome = prices[i].nome
             let valor = prices[i].valores
@@ -1051,35 +1074,36 @@ const findAllByPriceAverage = (request, response) => {
                 restaurantsAverage.push({
                     restaurante: nome,
                     media: average
-                })
-            }
+                });
+            };
+
             if (price && name) {
                 if (nome.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) && average <= price) {
                     restaurantsAverage.push({
                         restaurante: nome,
                         media: average
-                    })
-                }
-            }
+                    });
+                };
+            };
 
             if (price && !name) {
                 if (average <= price) {
                     restaurantsAverage.push({
                         restaurante: nome,
                         media: average
-                    })
-                }
-            }
+                    });
+                };
+            };
 
             if (!price && name) {
                 if (nome.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     restaurantsAverage.push({
                         restaurante: nome,
                         media: average
-                    })
-                }
-            }
-        }
+                    });
+                };
+            };
+        };
 
         restaurantsAverage.sort(function (a, b) {
             if (a.media > b.media) {
@@ -1099,43 +1123,46 @@ const findAllByPriceAverage = (request, response) => {
             restaurantsByPrice.push({
                 restaurante: nomes,
                 media: medias
-            })
-        }
+            });
+        };
+
         if (restaurantsByPrice.length === 0) {
             throw {
                 statusCode: 404,
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes Encontrados": restaurantsByPrice.length,
             "Lista de restaurantes": restaurantsByPrice
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
-        }
-        else {
+            response.status(error.statusCode).json(error);
+
+        } else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
-}
+                });
+            };
+        };
+    };
+};
 
 const findAllByDeliveryFee = (request, response) => {
     const { deliveryFee = null, name = null } = request.query
+
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         filterRestaurants.sort(function (a, b) {
             if (a.taxaDeEntrega > b.taxaDeEntrega) {
@@ -1158,39 +1185,36 @@ const findAllByDeliveryFee = (request, response) => {
                 fee.push({
                     "Nome": nomes,
                     "Taxa de entrega": `R$ ${taxas.toFixed(2).replace(".", ",")}`
-                })
-            }
+                });
+            };
 
             if (deliveryFee && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) && taxas <= deliveryFee) {
                     fee.push({
                         "Nome": nomes,
                         "Taxa de entrega": `R$ ${taxas.toFixed(2).replace(".", ",")}`
-                    })
-
-                }
-            }
+                    });
+                };
+            };
 
             if (deliveryFee && !name) {
                 if (taxas <= deliveryFee) {
                     fee.push({
                         "Nome": nomes,
                         "Taxa de entrega": `R$ ${taxas.toFixed(2).replace(".", ",")}`
-                    })
-
-                }
-            }
+                    });
+                };
+            };
 
             if (!deliveryFee && name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     fee.push({
                         "Nome": nomes,
                         "Taxa de entrega": `R$ ${taxas.toFixed(2).replace(".", ",")}`
-                    })
-                }
-            }
-
-        }
+                    });
+                };
+            };
+        };
 
         if (fee.length === 0) {
             throw {
@@ -1198,34 +1222,37 @@ const findAllByDeliveryFee = (request, response) => {
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": fee.length,
             "Lista de restaurantes": fee
-        })
+        });
 
     } catch (error) {
         console.error(error)
         console.log("busca recebida: ", request.query)
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
-        }
-        else {
+            response.status(error.statusCode).json(error);
+
+        } else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
-}
+                });
+            };
+        };
+    };
+};
+
 const findIFood = (request, response) => {
     const { name = null } = request.query
+
     try {
-        let filterRestaurants = restaurantesModel.slice()
+        let filterRestaurants = restaurantesModel.slice();
 
         let iFood = []
 
@@ -1237,18 +1264,18 @@ const findIFood = (request, response) => {
                 iFood.push({
                     "Nome": nomes,
                     "Restaurante Ifood": restaurantesIFood
-                })
-            }
+                });
+            };
 
             if (name) {
                 if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())) {
                     iFood.push({
                         "Nome": nomes,
                         "Restaurante Ifood": restaurantesIFood
-                    })
-                }
-            }
-        }
+                    });
+                };
+            };
+        };
 
         if (iFood.length === 0) {
             throw {
@@ -1256,36 +1283,35 @@ const findIFood = (request, response) => {
                 message: "Não foi possível encontrar resultados com a busca realizada",
                 details: "busca inválida:",
                 query: request.query
-            }
-        }
+            };
+        };
+
         response.status(200).json({
             "Busca por:": request.query,
             "Restaurantes encontrados": iFood.length,
             "Lista de restaurantes": iFood
-        })
+        });
 
     } catch (error) {
-        console.error(error)
-        console.log("busca recebida: ", request.query)
+        console.error(error);
+        console.log("busca recebida: ", request.query);
 
         if (error.statusCode) {
-            response.status(error.statusCode).json(error)
-        }
-        else {
+            response.status(error.statusCode).json(error);
+
+        } else {
             {
                 response.status(500).json({
                     message: error.message
-                })
-            }
-        }
-    }
-
-}
+                });
+            };
+        };
+    };
+};
 
 const createNewRestaurant = (request, response) => {
-    const { nome, estrelas, sobre, endereco, telefone, especialidade,
-        tipoDeServico, horarioDeFuncionamento, tempoDeEntrega, pagamento,
-        cardapio, taxaDeEntrega, Ifood } = request.body
+    const { nome, estrelas, sobre, endereco, telefone, especialidade, tipoDeServico,
+        horarioDeFuncionamento, tempoDeEntrega, pagamento, cardapio, taxaDeEntrega, Ifood } = request.body
 
     try {
         let filterRestaurants = restaurantesModel
@@ -1293,58 +1319,64 @@ const createNewRestaurant = (request, response) => {
 
         if (nome === null || nome === undefined || nome.trim() == "") {
             throw {
-                statusCode: 409,
+                statusCode: 406,
                 message: `Não foi possível cadastrar restaurante. Nome obrogatório`,
                 details: `Para cadastrar restaurante, um nome deve ser inserido.`
-            }
-        }
+            };
+        };
 
         const findRestaurantByName = restaurantesModel
             .find(restaurante => restaurante.nome.toLocaleLowerCase() == nome.toLocaleLowerCase())
 
-        if (
-            findRestaurantByName &&
-            findRestaurantByName.telefone.toLocaleLowerCase() == telefone.toLocaleLowerCase()
-        ) {
+        if (findRestaurantByName &&
+            findRestaurantByName.telefone.toLocaleLowerCase() == telefone.toLocaleLowerCase()) {
             throw {
                 statusCode: 409,
                 message: `Não foi possível cadastrar restaurante com o nome: ${nome}. Restaurante já cadastrado.`,
                 details: `já existe no sistema um restaurante com o nome: ${nome} e telefone: ${telefone}.`
-            }
-        }
+            };
+        };
+
         const newRestaurant = {
-            id, nome, estrelas, sobre, endereco, telefone, especialidade,
-            tipoDeServico, horarioDeFuncionamento, tempoDeEntrega, pagamento,
-            cardapio, taxaDeEntrega, Ifood
-        }
+            id, nome, estrelas, sobre, endereco, telefone, especialidade, tipoDeServico,
+            horarioDeFuncionamento, tempoDeEntrega, pagamento, cardapio, taxaDeEntrega, Ifood
+        };
+
+        const keys = Object.keys(newRestaurant)
+        keys.forEach(key => {
+            let check = true
+            if (!newRestaurant[key]) {
+                check = false
+                throw {
+                    statusCode: 406,
+                    message: `Não foi possível cadastrar restaurante: ${nome}. Todos os itens devem ser preenchidos.`,
+                    details: `Para a criação de um novo restaurante, é preciso preencher todos os dados.`
+                };
+            };
+        });
 
         filterRestaurants.push(newRestaurant)
-
-
-
         response.status(201).json({
             "Mensagem": "Restaurante cadastrado com sucesso",
             "Novo restaurante": newRestaurant,
             "Restaurantes cadastrados": filterRestaurants.length,
             "Lista de restaurantes": filterRestaurants
-        })
-
+        });
 
     } catch (error) {
-        if (error.statusCode) response.status(error.statusCode).json(error)
-        else response.status(500).json({ "message": error.message })
-    }
 
-}
+        if (error.statusCode) response.status(error.statusCode).json(error);
+        else response.status(500).json({ "message": error.message });
+
+    };
+};
 
 const deleteById = (request, response) => {
     const { id } = request.params
     try {
 
-        const findRestaurants = restaurantesModel.find(restaurant => restaurant.id == id)
-
-        const indice = restaurantesModel.indexOf(findRestaurants)
-
+        const findRestaurants = restaurantesModel.find(restaurant => restaurant.id == id);
+        const indice = restaurantesModel.indexOf(findRestaurants);
         let restauranteRemovido = restaurantesModel.splice(indice, 1);
 
         if (findRestaurants == undefined) throw new Error(`Não foi possível deletar restaurante. ID: ${id} não encontrado`);
@@ -1361,9 +1393,9 @@ const deleteById = (request, response) => {
         response.status(404).json({
             message: "Restaurante não removido. Esse restaurante não existe.",
             details: error.message,
-        })
-    }
-}
+        });
+    };
+};
 
 const updateAll = async (request, response) => {
 
@@ -1372,10 +1404,8 @@ const updateAll = async (request, response) => {
         const idRequest = request.params.id
         const bodyRequest = request.body
 
-        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest)
-
-        const indice = restaurantes.indexOf(findRestaurants)
-
+        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest);
+        const indice = restaurantes.indexOf(findRestaurants);
         bodyRequest.id = idRequest
 
         restaurantes.splice(indice, 1, bodyRequest);
@@ -1387,15 +1417,15 @@ const updateAll = async (request, response) => {
             "Restaurante atualizado": bodyRequest,
             "Lista de restaurantes": restaurantes
         }]);
+
     } catch (error) {
         console.error(error)
         response.status(404).json({
             message: "Restaurante não atualizado. Esse restaurante não existe.",
             details: error.message,
-        })
-    }
-
-}
+        });
+    };
+};
 
 const updateName = async (request, response) => {
     try {
@@ -1403,12 +1433,11 @@ const updateName = async (request, response) => {
         const idRequest = request.params.id
         const newName = request.body.nome
 
-        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest)
+        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest);
 
         if (findRestaurants == undefined) throw new Error(`Não foi possível atualizar o nome do restaurante solicitado. ID: ${idRequest} não encontrado`);
 
         findRestaurants.nome = newName
-
 
         response.status(200).json([{
             "Mensagem": "Nome atualizado com sucesso",
@@ -1416,14 +1445,13 @@ const updateName = async (request, response) => {
             "Lista de restaurantes": restaurantes
         }]);
 
-    }
-    catch (error) {
+    } catch (error) {
         console.error(error)
         response.status(404).json({
             message: "Restaurante não atualizado. Esse restaurante não existe.",
             details: error.message,
-        })
-    }
+        });
+    };
 };
 
 const updateItems = async (request, response) => {
@@ -1432,7 +1460,7 @@ const updateItems = async (request, response) => {
         const idRequest = request.params.id
         const bodyRequest = request.body
 
-        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest)
+        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest);
 
         if (findRestaurants == undefined) throw new Error(`Não foi possível atualizar o campo escolhido do restaurante solicitado. ID:${idRequest} não encontrado`);
 
@@ -1450,10 +1478,11 @@ const updateItems = async (request, response) => {
 
     } catch (error) {
         response.status(404).send({ message: error.message });
-    }
+    };
 };
 
 const giveStars = (request, response) => {
+
     try {
         const restaurantes = restaurantesModel
         const idRequest = request.params.id
@@ -1462,12 +1491,12 @@ const giveStars = (request, response) => {
 
         let novaAvaliacao = []
 
-        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest)
+        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest);
 
         if (findRestaurants == undefined) throw new Error(`Não foi possível atualizar o nome do restaurante solicitado. ID: ${idRequest} não encontrado`);
 
-        novaAvaliacao.push(findRestaurants.estrelas)
-        novaAvaliacao.push(avaliacao)
+        novaAvaliacao.push(findRestaurants.estrelas);
+        novaAvaliacao.push(avaliacao);
 
         let avaliacaoFinal = (novaAvaliacao.reduce((prev, next) => prev + next)) / novaAvaliacao.length
         findRestaurants.estrelas = avaliacaoFinal
@@ -1479,14 +1508,13 @@ const giveStars = (request, response) => {
             "Lista de restaurantes": restaurantes
         }]);
 
-    }
-    catch (error) {
-        console.error(error)
+    } catch (error) {
+        console.error(error);
         response.status(404).json({
             message: "Restaurante não atualizado. Esse restaurante não existe.",
             details: error.message,
-        })
-    }
+        });
+    };
 };
 
 
@@ -1513,4 +1541,4 @@ module.exports = {
     updateName,
     updateItems,
     giveStars
-}
+};
