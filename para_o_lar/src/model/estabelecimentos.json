@@ -23,6 +23,20 @@
         "telefone": "4155-4452",
         "pagamento": ["Dinheiro", "cartao", "pix"],
         "site" : "rosevariedades.com.br"
-    }
+    },
     
+    {
+        "id": 3,
+        "likes": 1,
+        "nome": "Mercadinho Sacolão",
+        "endereço": "Rua Bela Vista",
+        "numero": 650,
+        "bairro": "Igapó",
+        "cidade": "Tangara",
+        "telefone": "4155-1212",
+        "pagamento": ["Dinheiro", "VA e VR", "pix"],
+        "site" : "mercadinhosacolao.com.br"
+    }
+
+
 ]

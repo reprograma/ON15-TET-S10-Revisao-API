@@ -25,8 +25,8 @@ Vamos entender melhor os nossos dados e contrato definido para nossa API.
 O json com os dados que vamos usar na nossa API é o arquivo `estabelecimento.json` que está na pasta.
 
 
-** Vamos cadastrar novos estabelecimentos usando o verbo correto (qual sera o verbo?)
-** Vamos atualizar apenas o endereço de um estabelecimento 
+** Vamos cadastrar novos estabelecimentos usando o verbo correto (qual sera o verbo?) Post.
+** Vamos atualizar apenas o endereço de um estabelecimento. Patch
 
 Vamos deixar mais completo a nossa redes sociais
 
