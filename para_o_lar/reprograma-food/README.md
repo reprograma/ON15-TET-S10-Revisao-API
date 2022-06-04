@@ -123,9 +123,10 @@ Durante a semana 10 do curso {reprograma}, as alunas tiveram uma revisão sobre 
 
 <div align = "justify">
 
-Para esse projeto foi criada uma Web API com o tema: [restaurantes](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/src/models/restaurantesModels.json) encontrados na plataforma Ifood. Todos os restaurantes contidos nesse projeto, bem como suas respectivas informações, são reais e estão localizados na cidade de Jacareí - SP.   
+Para esse projeto foi criada uma Web API com o tema: [restaurantes](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/para_o_lar/reprograma-food/src/models/restaurantesModels.json) encontrados na plataforma Ifood. Todos os restaurantes contidos nesse projeto, bem como suas respectivas informações, são reais e estão localizados na cidade de Jacareí - SP.   
 
 <br>
+
 </div>
 
 ### OBJETIVO: 
@@ -144,7 +145,7 @@ Esse projeto foi construído utilizando a arquitetura MVC, acrônimo para Model-
 
 </div>
 
-O servidor, criado dentro da pasta [reprograma-food](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/paraOLar/reprograma-food), conta com a seguinte estrutura:
+O servidor, criado dentro da pasta [reprograma-food](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/para_o_lar/reprograma-food), conta com a seguinte estrutura:
 
 
 ```bash
@@ -178,17 +179,17 @@ O servidor, criado dentro da pasta [reprograma-food](https://github.com/BrunaCel
 
 <div align = "justify">
 
-- [server.js](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/server.js) - Define onde o servidor local irá ser executado;
+- [server.js](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/para_o_lar/reprograma-food/server.js) - Define onde o servidor local irá ser executado;
 
-- [app.js](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/src/app.js) - Requere as dependências necessárias para o projeto e define o padrão de cada rota;
+- [app.js](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/para_o_lar/reprograma-food/src/app.js) - Requere as dependências necessárias para o projeto e define o padrão de cada rota;
 
-- [controllers](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/paraOLar/reprograma-food/src/controllers) - pasta contendo o arquivo: [restaurantesController.js](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/src/controllers/restaurantesController.js), que define, em fuções, o que cada rota deve realizar;
+- [controllers](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/para_o_lar/reprograma-food/src/controllers) - pasta contendo o arquivo: [restaurantesController.js](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/src/controllers/restaurantesController.js), que define, em fuções, o que cada rota deve realizar;
      
-- [models](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/paraOLar/reprograma-food/src/models)- pasta contendo o aquivo [restaurantesModels.json](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/src/models/restaurantesModels.json), que contém as informações sobre os restaurantes; 
+- [models](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/para_o_lar/reprograma-food/src/models)- pasta contendo o aquivo [restaurantesModels.json](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/src/models/restaurantesModels.json), que contém as informações sobre os restaurantes; 
 
-- [routes](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/paraOLar/reprograma-food/src/routes) - pasta contendo o arquivo: [restaurantesRoutes.js](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/src/routes/restaurantesRoutes.js). Esse arquivo acrescenta o complemento à rota genérica, fazendo com que ela se torne completa e possa ser acessada; 
+- [routes](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/para_o_lar/reprograma-food/src/routes) - pasta contendo o arquivo: [restaurantesRoutes.js](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/src/routes/restaurantesRoutes.js). Esse arquivo acrescenta o complemento à rota genérica, fazendo com que ela se torne completa e possa ser acessada; 
 
-- Outros arquivos e pastas - pasta [assets](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/paraOLar/reprograma-food/assets), que contém o logo do projeto, package-lock.json e package.json. que são arquivos relacionados a dependências e README.md, contendo a documentação do projeto.
+- Outros arquivos e pastas - pasta [assets](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/tree/BrunaCelestino/para_o_lar/reprograma-food/assets), que contém o logo do projeto, package-lock.json e package.json. que são arquivos relacionados a dependências e README.md, contendo a documentação do projeto.
 
 </div>
 
@@ -1173,10 +1174,10 @@ Para que fosse possível a execução desse projeto, foi necessária a utilizaç
 
 <div align = "justify">
 
-- [package-lock.json](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/package-lock.json) - especifica a versão e suas dependências;
+- [package-lock.json](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/para_o_lar/reprograma-food/package-lock.json) - especifica a versão e suas dependências;
 <br>
 
-- [package.json](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/paraOLar/reprograma-food/package.json) - arquivo de configuração utilizado para estipular e configurar dependências;
+- [package.json](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/para_o_lar/reprograma-food/package.json) - arquivo de configuração utilizado para estipular e configurar dependências;
 <br>
 
 - [.gitignore](https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API/blob/BrunaCelestino/.gitignore) - arquivo que lista quais arquivos ou pastas o Git deve ignorar.
@@ -1191,13 +1192,13 @@ Para que fosse possível a execução desse projeto, foi necessária a utilizaç
 1. Entre na pasta onde você deseja clonar o repositório. Abra o **git** nela e digite: 
 
     ```bash
-    $ git clone https://github.com/BrunaCelestino/  ON15-TET-S10-Revisao-API
+    $ git clone https://github.com/BrunaCelestino/ON15-TET-S10-Revisao-API
      ```
 
 2. Digite a linha abaixo para entrar na pasta correta: 
 
     ```bash
-    $ cd paraOlar/
+    $ cd para_o_lar/
     ```
 
     ```bash
