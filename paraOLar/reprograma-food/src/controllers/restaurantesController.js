@@ -2,8 +2,8 @@ const restaurantesModel = require("../models/restaurantesModels.json");
 
 const findAllRestaurants = (request, response) => {
 
-    const { name = null, stars = null, specialty = null, serviceType = null, deliveryTime = null, paymentOptions = null, 
-            deliveryFee = null, description = null } = request.query
+    const { name = null, stars = null, specialty = null, serviceType = null, deliveryTime = null, paymentOptions = null,
+        deliveryFee = null, description = null } = request.query
 
     try {
         let filterRestaurants = restaurantesModel.slice();
@@ -846,8 +846,8 @@ const getAllWithPaymentOptions = (request, response) => {
             };
 
             if (paymentOptions && name) {
-                if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase()) 
-                && pagamentos.toString().toLocaleLowerCase().includes(paymentOptions.toLocaleLowerCase())) {
+                if (nomes.toString().toLocaleLowerCase().includes(name.toLocaleLowerCase())
+                    && pagamentos.toString().toLocaleLowerCase().includes(paymentOptions.toLocaleLowerCase())) {
                     payment.push({
                         "Nome": nomes,
                         "Opções de pagamento": pagamentos
@@ -1456,6 +1456,33 @@ const updateName = async (request, response) => {
     };
 };
 
+const updatePhone = async (request, response) => {
+    try {
+        const restaurantes = restaurantesModel
+        const idRequest = request.params.id
+        const newPhone = request.body.telefone
+
+        const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest);
+
+        if (findRestaurants == undefined) throw new Error(`Não foi possível atualizar o telefone do restaurante solicitado. ID: ${idRequest} não encontrado`);
+
+        findRestaurants.telefone = newPhone
+
+        response.status(200).json([{
+            "Mensagem": "Telefone atualizado com sucesso",
+            "Restaurante atualizado": findRestaurants,
+            "Lista de restaurantes": restaurantes
+        }]);
+
+    } catch (error) {
+        console.error(error)
+        response.status(404).json({
+            message: "Restaurante não atualizado. Esse restaurante não existe.",
+            details: error.message,
+        });
+    };
+};
+
 const updateItems = async (request, response) => {
     try {
         const restaurantes = restaurantesModel
@@ -1541,6 +1568,7 @@ module.exports = {
     deleteById,
     updateAll,
     updateName,
+    updatePhone,
     updateItems,
     giveStars
 };

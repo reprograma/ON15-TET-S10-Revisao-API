@@ -28,6 +28,7 @@ router.delete("/delete/:id", controller.deleteById);
 router.put("/update/:id", controller.updateAll);
 
 router.patch("/updateName/:id", controller.updateName);
+router.patch("/updatePhone/:id", controller.updatePhone);
 router.patch("/updateItems/:id", controller.updateItems);
 router.patch("/giveStars/:id", controller.giveStars);
 
