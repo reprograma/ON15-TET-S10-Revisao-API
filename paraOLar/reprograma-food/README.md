@@ -318,8 +318,6 @@ Com as lógicas contruídas, a próxima etapa foi a criação das seguintes rota
 
 ###  ROTAS: 
 
-<br>
-
 ####  Método GET: 
 
 <div align = "center">
