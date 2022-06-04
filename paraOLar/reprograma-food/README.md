@@ -14,8 +14,8 @@
 
 # <div align = "center"> Sumário </div>
 - [Introdução](#introdução)
-    - [HTTP](#-div-align--"justify"-http-div)
-    - [CRUD](#-div-align--"justify"-crud-div)
+    - [HTTP](#http)
+    - [CRUD](#crud)
     - [RELAÇÃO ENTRE OS VERBOS HTTP E O CRUD](#-div-align--"justify"-projeto-div)
     - [WEB API](#-div-align--"justify"-web-api-div)
 - [Todas em Tech](#-div-align--"justify"-todas-em-tech-div)
@@ -42,7 +42,7 @@
 
 #  Introdução 
 
-## <div align = "justify"> HTTP: </div>
+##  HTTP: 
 
 <div align = "justify">
  HTTP é um protocolo responsável pela comunicação de websites. Um website, ao ser acessado, recebe esse protocolo. Esse protocolo possui métodos, que também podem ser chamados de verbos. O protocolo baseado no modelo Client/Server, possui pedidos (requests) e respostas (responses) e é através desses requests e responses que a comunicação acontece. Os métodos HTTP, que definem qual ação acontecerá, são: GET, POST, PUT, PATCH e DELETE.
@@ -57,7 +57,7 @@
 
 </div>
 
-## <div align = "justify"> CRUD: </div>
+##  CRUD:
 
 
 <div align = "justify">
