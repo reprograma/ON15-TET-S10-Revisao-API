@@ -8,5 +8,5 @@ const PORT = 8000 // define uma porta para o nosso servidor escutar
  * listen 2 parametro -> callback -> no callback eu imprimo uma 
  * mensagem dizendo que a minha api rodou
  */
-app.listen(PORT, () => console.log('fé no pai, que agora vai, na porta 8000'))
+app.listen(PORT, () => console.log('Servidor rodando na porta 8000'))
 
