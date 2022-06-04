@@ -5,11 +5,8 @@ const findAllStore = (request,response) =>{
     response.status(200).send(model)
     if (model.length == 0) throw new Error(`desculpa,não possuimos estabelecimentos cadastrados ainda`)
    } 
-   catch(error){
-    response.status(404).json({
-        "mensagem": "Ops! Encontramos um erro:"
-        ,error
-    })
+   catch(erro){
+    response.status(404).send(erro.message)
    }
 }
 
@@ -22,7 +19,7 @@ const findStoreById = (request,response)=>{
         response.status(200).send(findStroreId)
     }
     catch(erro){
-        response.status(404).json({"mensagem":"Ops! Encontramos um erro:",erro})
+        response.status(404).send(erro.message)
     }
     
 
@@ -34,92 +31,88 @@ const findStoreByQuery = (request,response)=>{
     try{
         
         if(nome){
-            let filtreStore = model.filter( loja => loja.nome.toLocaleLowerCase().includes(nome.toLocaleLowerCase))
-            if(filtreStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse id")
+            let filtreStore = model.filter( loja => loja.nome.toLocaleLowerCase().includes(nome.toLocaleLowerCase()))
+            if(filtreStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse nome")
             response.status(200).send(filtreStore)
         }
         if(bairro){
-            let filtreStore = model.filter( loja => loja.bairro.toLocaleLowerCase().includes(bairro.toLocaleLowerCase))
-            if(filtreStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse id")
+            let filtreStore = model.filter( loja => loja.bairro.toLocaleLowerCase().includes(bairro.toLocaleLowerCase()))
+            if(filtreStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse bairro")
             response.status(200).send(filtreStore)
         }
         if(cidade){
-            let filtreStore = model.filter( loja => loja.cidade.toLocaleLowerCase().includes(cidade.toLocaleLowerCase))
-            if(filtreStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse id")
+            let filtreStore = model.filter( loja => loja.cidade.toLocaleLowerCase().includes(cidade.toLocaleLowerCase()))
+            if(filtreStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse cidade")
             response.status(200).send(filtreStore)
         }
 
     }
     catch(erro){
-        response.status(404).json({"mensagem":"Ops! Encontramos um erro:",erro})
+        response.status(404).send(erro.message)
     }
 }
 
 
 const createStore = (request,response)=>{
     const {like = 0, nome = null,endereço = null,numero = null,bairro = null,
-    cidade = null,telefone = null,pagamento = ["Dinheiro", "pix"],site=nome+".com.br"}= request.body
+    cidade = null,telefone = null,pagamento = ["Dinheiro", "pix"],site= nome+".com.br"}= request.body
+    const id = model[model.length-1].id+1
     try{
         if(nome == null || nome === undefined || nome.trim() == "")throw new Error("É obrigatorio inserir o nome do estabelecimento")
         let newStore = {
-            id:model[model.length-1][id]+1,
-            nome: nome,
-            endereço:endereço,
-            numero:numero,
-            bairro:bairro,
-            cidade:cidade,
-            telefone:telefone,
-            like:like,
-            pagamento:pagamento,
-            site:site      
+            "id":id,
+            "like":like,
+            "nome": nome,
+            "endereço":endereço,
+            "numero":numero,
+            "bairro":bairro,
+            "cidade":cidade,
+            "telefone":telefone,
+            "pagamento":pagamento,
+            "site":site      
         }
         model.push(newStore)
         response.status(201).send(newStore)
     }
     catch(erro){
-        response.status(404).json({"mensagem":"Ops! Encontramos um erro:",erro})
+        response.status(404).send(erro.message)
     }
 
 }
 
 const updateAddressStore = (request,response)=>{
-    const{idRequest= null}= request.params.id
+    const{id=null}= request.params
     const {endereço = null}= request.body
     try{
-        if(idRequest == null) throw new Error('Não foi inserido o id da loja que deseja atualizar endereço')
+        if(id == null) throw new Error('Não foi inserido o id da loja que deseja atualizar endereço')
         if(endereço == null) throw new Error('Não foi informando o novo endereço')
-        let findStore = model.find(loja => loja.id == idRequest)
+        let findStore = model.find(loja => loja.id == id)
         if(findStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse id")
         findStore.endereço = endereço
         response.status(200).send(findStore)
     }
     catch(erro){
-        response.status(404).send(erro)
+        response.status(404).send(erro.message)
     }
 }
 
 
 const like = (request,response)=>{
-    const{idRequest= null}= request.params.id
-    const {nome = null,like = null}= request.body
+    const {nome = null,likes = null}= request.body
     try{
-        if(idRequest==null & nome == null)throw new Error('Não foi inserido o id ou nome da loja que deseja fazer avaliação')
+        if(nome == null)throw new Error('Não foi inserido o  nome da loja que deseja fazer avaliação')
         if(like == null)throw new Error('Não foi informado sua avaliação!')
-        if(idRequest != null){
-            let findStore = model.find(loja => loja.id == idRequest)
-            if(findStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse id")
-            findStore.like = findStore.like + like
-        }
-        if(nome != null){
-           let findStore = model.filter( loja => loja.nome.toLocaleLowerCase().includes(nome.toLocaleLowerCase))
+        if(nome){
+           let findStore = model.find( loja => loja.nome.toLocaleLowerCase().includes(nome.toLocaleLowerCase()))
            if(findStore.length == 0) throw new Error("Não foi encontrado nenhum estabelecimento com esse nome")
-           findStore.like = findStore.like + like
+           findStore.likes +=likes
+           response.status(200).send(findStore)
         }
-        response.status(200).send(findStore)
+       
 
     }
     catch(erro){
-        response.status(404).send(erro)
+        response.status(404).send(erro.message)
     }
 
 }
