@@ -1322,7 +1322,7 @@ const createNewRestaurant = (request, response) => {
         if (nome === null || nome === undefined || nome.trim() == "") {
             throw {
                 statusCode: 406,
-                message: `Não foi possível cadastrar restaurante. Nome obrogatório`,
+                message: `Não foi possível cadastrar restaurante. Nome obrigatório`,
                 details: `Para cadastrar restaurante, um nome deve ser inserido.`
             };
         };
@@ -1506,7 +1506,11 @@ const updateItems = async (request, response) => {
         }]);
 
     } catch (error) {
-        response.status(404).send({ message: error.message });
+        console.error(error)
+        response.status(404).json({
+            message: "Restaurante não atualizado. Esse restaurante não existe.",
+            details: error.message,
+        });
     };
 };
 
@@ -1522,7 +1526,7 @@ const giveStars = (request, response) => {
 
         const findRestaurants = restaurantes.find(restaurant => restaurant.id == idRequest);
 
-        if (findRestaurants == undefined) throw new Error(`Não foi possível atualizar o nome do restaurante solicitado. ID: ${idRequest} não encontrado`);
+        if (findRestaurants == undefined) throw new Error(`Não foi possível avaliar o restaurante solicitado. ID: ${idRequest} não encontrado`);
 
         novaAvaliacao.push(findRestaurants.estrelas);
         novaAvaliacao.push(avaliacao);
@@ -1540,7 +1544,7 @@ const giveStars = (request, response) => {
     } catch (error) {
         console.error(error);
         response.status(404).json({
-            message: "Restaurante não atualizado. Esse restaurante não existe.",
+            message: "Restaurante não avaliado. Esse restaurante não existe.",
             details: error.message,
         });
     };
