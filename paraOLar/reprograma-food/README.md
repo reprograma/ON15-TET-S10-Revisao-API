@@ -13,7 +13,7 @@
 <br>
 
 # <div align = "center"> Sumário </div>
-- [Introdução](#-introdução)
+- [Introdução](#introdução)
     - [HTTP](#-div-align--"justify"-http-div)
     - [CRUD](#-div-align--"justify"-crud-div)
     - [RELAÇÃO ENTRE OS VERBOS HTTP E O CRUD](#-div-align--"justify"-projeto-div)
@@ -39,11 +39,9 @@
         - [INSTALAÇÃO](#-div-align--"justify"-instalação-div)
 - [Referências](#-div-align--"center"-referências-div)
 
-<br>
-<br>
-<br>
 
 #  Introdução 
+
 ## <div align = "justify"> HTTP: </div>
 
 <div align = "justify">
