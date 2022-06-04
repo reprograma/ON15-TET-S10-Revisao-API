@@ -2,27 +2,98 @@
     {
         "id": 1,
         "likes": 1,
-        "nome": "Livraria Cultura",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 100,
-        "bairro": "centro",
-        "cidade": "Tangara",
-        "telefone": "4156-4452",
-        "pagamento": ["Dinheiro", "pix"],
-        "site" : "livrariacultura.com.br"
+        "dislikes" : 1,
+        "name": "Sebo do Messias",
+        "type": ["Loja física", "Loja virtual"],
+        "address": "Praça Doutor João Mendes",
+        "number" : 140,
+        "district": "Sé",
+        "city": "São Paulo",
+        "hours": "Seg à Sex: 9h às 19h | Sab: 9h às 17h",
+        "site": "https://sebodomessias.com.br/lps.aspx"
+    },
+
+{
+        "id": 2,
+        "likes": 1,
+        "dislikes": 1,
+        "name": "Big Papa Records",
+        "type": ["Loja física", "Loja virtual"],
+        "address": "Rua sete de abril",
+        "number": 154,
+        "district": "República",
+        "city": "São Paulo",
+        "hours": "Seg à Sex: 10h às 20h | Sab: 10h às 18h",
+        "site": "http://www.bigpaparecords.com/"
+    },
+
+{
+        "id": 3,
+        "likes": 1,
+        "dislikes": 1,
+        "name" : "Locomotiva Discos",
+        "type" : ["Loja física", "Loja virtual"],
+        "address" : "Rua sete de abril",
+        "number" : 154,
+        "district" : "República",
+        "city": "São Paulo",
+        "hours": "Seg à Sex: 10h às 20h | Sab: 10h às 18h",
+        "site": "http://www.locomotivadiscos.com.br/"
+    },
+
+{
+        "id": 4,
+        "likes": 1,
+        "dislikes": 1,
+        "name": "Baratos Afins",
+        "type": ["Loja física", "Loja virtual"],
+        "address": "Avenida São João (Galeria do Rock)",
+        "number": 439,
+        "district": "República",
+        "city": "São Paulo",
+        "hours": "Seg à Sex: 10h às 18h | Sab: 10h às 16h",
+        "site": "https://www.baratosafins.com.br/"
+    },
+
+{
+        "id": 5,
+        "likes": 1,
+        "dislikes": 1,
+        "name": "Celsom Discos",
+        "type": ["Loja física", "Loja virtual"],
+        "address": "Rua 24 de maio (Galeria Boulevard Centro)",
+        "number": 188,
+        "district": "República",
+        "city": "São Paulo",
+        "hours": "Seg à Sex: 10h às 20h | Sab: 10h às 16h",
+        "site": "https://www.instagram.com/celsomdiscos/"
     },
 
     {
-        "id": 2,
+        "id": 6,
         "likes": 1,
-        "nome": "Rose Variedades",
-        "endereço": "Rua Geraldo Abdala",
-        "numero": 200,
-        "bairro": "Bubu",
-        "cidade": "Tangara",
-        "telefone": "4155-4452",
-        "pagamento": ["Dinheiro", "cartao", "pix"],
-        "site" : "rosevariedades.com.br"
+        "dislikes": 1,
+        "name": "Casarão do Vinil",
+        "type": "Loja física",
+        "address": "Rua dos Trilhos",
+        "number": 1212,
+        "district": "Mooca",
+        "city": "São Paulo",
+        "hours": "Diariamente: 9h às 18h",
+        "site": "https://www.facebook.com/casaraodoviniloficial/"
+    },
+
+    {
+        "id": 7,
+        "likes": 1,
+        "dislikes": 1,
+        "name": "Sub-Solo Discos",
+        "type": "Loja física",
+        "address": "Rua Teodoro Sampaio",
+        "number": 1000 ,
+        "district": "Pinheiros",
+        "city": "São Paulo",
+        "hours": "sábados: 9h às 18h",
+        "site": "https://www.subsolodiscos.com.br/"
     }
-    
 ]

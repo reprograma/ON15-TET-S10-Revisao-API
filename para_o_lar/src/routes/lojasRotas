@@ -1,0 +1,16 @@
+const express = require("express")                             //IMPORTANDO A DEPENDÊNCIA
+const controller =  require("../controllers/lojasController")  //IMPORTANDO A CONTROLLER
+const router = express.Router()                                //CHAMANDO A ROUTER DO EXPRESS
+
+//TODAS AS ROTAS
+router.get("/buscar", controller.findAll)
+router.get("/nome", controller.findByName)
+router.get("/bairro", controller.findByDistrict)
+router.get("/:id", controller.findById)
+router.put("/updateAll/:id", controller.updateAll)
+router.patch("/update/:id", controller.updateItens) 
+router.post("/cadastrar", controller.createStore)
+
+
+
+module.exports = router
