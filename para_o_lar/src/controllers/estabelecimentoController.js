@@ -26,8 +26,26 @@ const {nome, endereco} = request.body
     console.log(novoEstabelecimento)
 }
 
+const buscarPorID = (req, res) => {
+    const { id } = req.params
+    // const buscarPorID = livrosModel[id] 
+    try {
+        const buscarPorID = estabelecimentos.find(estabelecimento => estabelecimento.id == id)// null | ebook
 
+        if (!buscarPorID) throw new Error(`desculpa, não foi possivel encontrar o estabelecimento com id ${id}`)
+
+        res.status(200).json(buscarPorID)
+
+    } catch (error) {
+        console.error(error)
+        res.status(404).json({
+            message: "Desculpa, estabeleciment nao encontrado.",
+            details: error.message,
+        })
+    }
+}
 
 module.exports = {
-    createEstabelecimento
+    createEstabelecimento,
+    buscarPorID
 }
