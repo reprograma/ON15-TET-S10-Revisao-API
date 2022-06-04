@@ -12,32 +12,32 @@
 </div>
 <br>
 
-# <div align = "center"> Sumário </div>
+# Sumário 
 - [Introdução](#introdução)
     - [HTTP](#http)
     - [CRUD](#crud)
-    - [RELAÇÃO ENTRE OS VERBOS HTTP E O CRUD](#-div-align--"justify"-projeto-div)
-    - [WEB API](#-div-align--"justify"-web-api-div)
-- [Todas em Tech](#-div-align--"justify"-todas-em-tech-div)
-    - [SEMANA 10](#-div-align--"justify"-semana-10-div)
-- [{reprograma}food](#-div-align--"center"-reprogramafood-div)
-    - [PROJETO](#-div-align--"justify"-projeto-div)
-    - [OBJETIVO](#-div-align--"justify"-objetivo-div)
-    - [ARQUITETURA](#-div-align--"justify"-arquitetura-div)
-    - [DESENVOLVIMENTO](#-div-align--"justify"-desenvolvimento-div)
-        - [ROTAS](#-div-align--"justify"-rotas-div)
-            - [Método GET](#-div-align--"justify"-método-get-div)
-            - [Método PATCH](#-div-align--"justify"-método-patch-div)
-            - [Método PUT](#-div-align--"justify"-método-put-div)
-            - [Método DELETE](#-div-align--"justify"-método-delete-div)
-            - [Método POST](#-div-align--"justify"-método-post-div)
-        - [FUNCIONAMENTO](#-div-align--"justify"-funcionamento-div)
-    - [INFORMAÇÕES TÉCNICAS](#-div-align--"justify"-informações-técnicas-div)
-        - [DEPENDÊNCIAS](#-div-align--"justify"-dependências-div)
-            - [Módulos](#-div-align--"justify"-módulos-div)
-            - [Arquivos](#-div-align--"justify"-arquivos-div)
-        - [INSTALAÇÃO](#-div-align--"justify"-instalação-div)
-- [Referências](#-div-align--"center"-referências-div)
+    - [RELAÇÃO ENTRE OS VERBOS HTTP E O CRUD](#relação-entre-os-verbos-http-e-o-crud)
+    - [WEB API](#web-api)
+- [Todas em Tech](#todas-em-tech)
+    - [SEMANA 10](#semana-10)
+- [{reprograma}food](#reprogramafood)
+    - [PROJETO](#projeto)
+    - [OBJETIVO](#objetivo)
+    - [ARQUITETURA](#arquitetura)
+    - [DESENVOLVIMENTO](#desenvolvimento)
+        - [ROTAS](#rotas)
+            - [Método GET](#método-get)
+            - [Método PATCH](#método-patch)
+            - [Método PUT](#método-put)
+            - [Método DELETE](#método-delete)
+            - [Método POST](#método-post)
+        - [FUNCIONAMENTO](#funcionamento)
+    - [INFORMAÇÕES TÉCNICAS](#informações-técnicas)
+        - [DEPENDÊNCIAS](#dependências)
+            - [Módulos](#módulos)
+            - [Arquivos](#arquivos)
+        - [INSTALAÇÃO](#instalação)
+- [Referências](#referências)
 
 
 #  Introdução 
@@ -66,7 +66,7 @@ CRUD são as quatro operações básicas utilizadas em bases de dados relacionai
     
 </div>
 
-## <div align = "justify"> RELAÇÃO ENTRE OS VERBOS HTTP E O CRUD: </div>
+## RELAÇÃO ENTRE OS VERBOS HTTP E O CRUD:
 
 <div align = "justify">
     
@@ -85,7 +85,7 @@ O acrônimo CRUD tem relação direta com os verbos (métodos) GET, PUT, POST, P
 
 </div>
 
-## <div align = "justify"> WEB API: </div>
+## WEB API:
 
 <div align = "justify">
  Uma web API (Application Programming Interfaces) é uma construção disponível nas linguagens de programação, que possibilita a criação de funcionalidades complexas, de modo mais simplificado, por desenvolvedores. A contrução abstrai o código mais complexo, proporcionando o uso de sintaxes mais simples em seu lugar.
@@ -94,7 +94,7 @@ O acrônimo CRUD tem relação direta com os verbos (métodos) GET, PUT, POST, P
 
 <br>
 
-# <div align = "justify"> Todas em Tech </div>
+# Todas em Tech 
 
 <div align = "justify">
     
@@ -102,7 +102,7 @@ Todas em Tech é um projeto da [{reprograma}](https://reprograma.com.br/), que t
 </div>
 <br>  
 
-## <div align = "justify"> SEMANA 10: </div>
+##  SEMANA 10: 
 
 <div align = "justify">
     
@@ -112,10 +112,14 @@ Durante a semana 10 do curso {reprograma}, as alunas tiveram uma revisão sobre 
 <br> 
 
 </div>
-  
-# <div align = "center"> {reprograma}food </div>
 
-## <div align = "justify"> PROJETO </div>
+<div align = "center">
+
+# {reprograma}food 
+
+</div>
+
+## PROJETO 
 
 <div align = "justify">
 
@@ -124,7 +128,7 @@ Para esse projeto foi criada uma Web API com o tema: [restaurantes](https://gith
 <br>
 </div>
 
-### <div align = "justify"> OBJETIVO: </div>
+### OBJETIVO: 
 <div align = "justify">
 
 O objetivo dessa web API é reunir os restaurantes cadastrados na plataforma Ifood, localizados na cidade de Jacareí -SP, tornando possível para os usuários pesquisar informações sobre os restaurantes, baseando-se em uma série de parâmetros, utilizando o método **GET**, além de possibilitar o cadastro de novos restaurantes, utilizando o método **POST**, remover restaurantes com o método **DELETE**, atualizar restaurantes por completo usando **PUT**, atualizar apenas o nome do restaurante, telefone ou qualquer outro item desejado, além de avaliar o restaurante, obtendo uma nova média de avaliação, utilizando **PATCH**. 
@@ -132,7 +136,7 @@ O objetivo dessa web API é reunir os restaurantes cadastrados na plataforma Ifo
 <br>
 </div>
 
-### <div align = "justify"> ARQUITETURA: </div>
+###  ARQUITETURA: 
 
 <div align = "justify">
 
@@ -190,7 +194,7 @@ O servidor, criado dentro da pasta [reprograma-food](https://github.com/BrunaCel
 
 <br>
 
-## <div align = "justify"> DESENVOLVIMENTO </div>
+## DESENVOLVIMENTO 
 <div align = "justify">
 
 Através de uma busca realizada na plataforma Ifood, foram selecionados 10 restaurantes, para serem inseridos na API **{reprograma}food**. Cada restaurante foi preenchido com informações como nome, avaliação por estrelas, descrição sobre o estabelecimento, endereço, telefone, quais as especialidades do restaurante, bem como o tipo de serviço que o mesmo oferece: delivery, presencial ou retirada.   
@@ -312,11 +316,11 @@ Com as lógicas contruídas, a próxima etapa foi a criação das seguintes rota
 
 </div>
 
-### <div align = "justify"> ROTAS: </div>
+###  ROTAS: 
 
 <br>
 
-#### <div align = "justify"> Método GET: </div>
+####  Método GET: 
 
 <div align = "center">
 
@@ -341,7 +345,7 @@ Com as lógicas contruídas, a próxima etapa foi a criação das seguintes rota
 <br>
 </div>
 
-#### <div align = "justify"> Método PATCH: </div>
+####  Método PATCH: 
 
 <div align = "center">
 
@@ -355,7 +359,7 @@ Com as lógicas contruídas, a próxima etapa foi a criação das seguintes rota
 <br>
 </div>
 
-#### <div align = "justify"> Método PUT: </div>
+####  Método PUT: 
 
 <div align = "center">
 
@@ -367,7 +371,7 @@ Com as lógicas contruídas, a próxima etapa foi a criação das seguintes rota
 </div>
 
 
-#### <div align = "justify"> Método DELETE: </div>
+####  Método DELETE: 
 
 <div align = "center">
 
@@ -380,7 +384,7 @@ Com as lógicas contruídas, a próxima etapa foi a criação das seguintes rota
 
 
 
-#### <div align = "justify"> Método POST: </div>
+####  Método POST:
 
 <div align = "center">
 
@@ -391,7 +395,7 @@ Com as lógicas contruídas, a próxima etapa foi a criação das seguintes rota
 <br>
 </div>
 
-### <div align = "justify"> FUNCIONAMENTO: </div>
+###  FUNCIONAMENTO: 
 
 <div align = "justify">
 
@@ -1142,8 +1146,8 @@ Com essa rota, é possível criar um novo restaurante, através do body request,
 
 </div>
 
-## <div align = "justify"> INFORMAÇÕES TÉCNICAS </div>
-### <div align = "justify"> DEPENDÊNCIAS: </div>
+##  INFORMAÇÕES TÉCNICAS 
+### DEPENDÊNCIAS:
 
 <div align = "justify">
 
@@ -1152,7 +1156,7 @@ Para que fosse possível a execução desse projeto, foi necessária a utilizaç
 
 <br>
 
-### <div align = "justify"> Módulos: </div>
+###  Módulos:
 
 <div align = "justify">
 
@@ -1167,7 +1171,7 @@ Para que fosse possível a execução desse projeto, foi necessária a utilizaç
 
 </div>
 
-### <div align = "justify"> Arquivos: </div>
+###  Arquivos: 
 
 <div align = "justify">
 
@@ -1184,7 +1188,7 @@ Para que fosse possível a execução desse projeto, foi necessária a utilizaç
 
 <br>
 
-### <div align = "justify"> INSTALAÇÃO: </div>
+###  INSTALAÇÃO: 
 
 1. Entre na pasta onde você deseja clonar o repositório. Abra o **git** nela e digite: 
 
@@ -1225,7 +1229,11 @@ Para que fosse possível a execução desse projeto, foi necessária a utilizaç
 
 <br><br>
 
-# <div align = "center"> Referências </div>
+<div align = "center">
+
+#  Referências 
+
+</div>
 
 <div align = "center">
 
