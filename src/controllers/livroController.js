@@ -96,9 +96,53 @@ const findOneEbookByTitle = (req, res) => {
 }
 
 const createEbook = (req, res) => {
-    const { title, paginas, author} = req.body
+    const { titulo, paginas, autor } = req.body
 
-    if (!title || title.trim()== "") throw new Error()
+    try {
+        const id = livrosModel.length
+
+        if(!titulo === null || titulo === undefined || titulo.trim() === ""){
+            throw{
+                statusCode: 400,
+                message: "não pode ser criado, pois o titulo é requirido",
+                details: `o titulo recebido foi: ${titulo}`
+            
+            }
+        }
+
+
+
+        const findEbookByTitle = livrosModel.
+        find(ebook => ebook.titulo.toLocaleLowerCase() == titulo.toLocaleLowerCase())
+
+        if (
+            findEbookByTitle &&
+            findEbookByTitle.autor.toLocaleLowerCase == autor.toLocaleLowerCase()
+
+        ) {
+            throw {
+                statusCode : 409,
+                message: "Já existe um livro com o mesmo titulo e autor",
+                details: "Já existe no sistema um livro com o mesmo titulo e autor"
+            }
+        }
+
+        const newEbook = { id, titulo, paginas, autor }
+        console.log(newEbook)
+
+        livrosModel.push(newEbook)
+
+        console.table(livrosModel)
+
+        res.status(201).json(newEbook)
+        
+    } catch (error) {
+        if (error.statusCode) res.status(error.statusCode).json(error)
+        else res.status(500).json({"message" : error.message})
+        
+    }
+    
+    // if (!title || title.trim()== "") throw new Error()
 }
 
 module.exports = {
