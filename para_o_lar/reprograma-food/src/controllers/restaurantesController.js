@@ -239,7 +239,7 @@ const organizeAllByStar = (request, response) => {
     }
 };
 
-const getAllWithDescription = (request, response) => {
+const accessDescription = (request, response) => {
     const { description = null, name = null } = request.query
 
     try {
@@ -318,7 +318,7 @@ const getAllWithDescription = (request, response) => {
 
 };
 
-const getAllWithPhone = (request, response) => {
+const accessPhonesByName = (request, response) => {
     const { name = null } = request.query
     try {
         let filterRestaurants = restaurantesModel.slice();
@@ -376,7 +376,7 @@ const getAllWithPhone = (request, response) => {
     };
 };
 
-const getAllWithAdress = (request, response) => {
+const accessAdressByName = (request, response) => {
     const { name = null } = request.query
     try {
         let filterRestaurants = restaurantesModel.slice();
@@ -436,7 +436,7 @@ const getAllWithAdress = (request, response) => {
 };
 
 
-const getAllWithSpecialty = (request, response) => {
+const accessSpecialty = (request, response) => {
     const { specialty = null, name = null } = request.query
     try {
         let filterRestaurants = restaurantesModel.slice();
@@ -516,7 +516,7 @@ const getAllWithSpecialty = (request, response) => {
     };
 };
 
-const getAllWithServiceType = (request, response) => {
+const accessServiceType = (request, response) => {
     const { serviceType = null, name = null } = request.query
     try {
         let filterRestaurants = restaurantesModel.slice();
@@ -598,7 +598,7 @@ const getAllWithServiceType = (request, response) => {
     };
 };
 
-const getAllWithOpeningHours = (request, response) => {
+const accessBusinessHours = (request, response) => {
     const { openingHours = null, closingHours = null, name = null } = request.query
     try {
         let filterRestaurants = restaurantesModel.slice();
@@ -826,7 +826,7 @@ const organizeAllByDeliveryTime = (request, response) => {
     };
 };
 
-const getAllWithPaymentOptions = (request, response) => {
+const accessPaymentOptions = (request, response) => {
     const { paymentOptions = null, name = null } = request.query
     try {
         let filterRestaurants = restaurantesModel.slice();
@@ -1483,7 +1483,7 @@ const updatePhone = async (request, response) => {
     };
 };
 
-const updateItems = async (request, response) => {
+const updateAnyItem = async (request, response) => {
     try {
         const restaurantes = restaurantesModel
         const idRequest = request.params.id
@@ -1556,14 +1556,14 @@ module.exports = {
     findById,
     findByName,
     organizeAllByStar,
-    getAllWithDescription,
-    getAllWithPhone,
-    getAllWithAdress,
-    getAllWithSpecialty,
-    getAllWithServiceType,
-    getAllWithOpeningHours,
+    accessDescription,
+    accessPhonesByName,
+    accessAdressByName,
+    accessSpecialty,
+    accessServiceType,
+    accessBusinessHours,
     organizeAllByDeliveryTime,
-    getAllWithPaymentOptions,
+    accessPaymentOptions,
     showAllMenus,
     findAllByPriceAverage,
     findAllByDeliveryFee,
@@ -1573,6 +1573,6 @@ module.exports = {
     updateAll,
     updateName,
     updatePhone,
-    updateItems,
+    updateAnyItem,
     giveStars
 };

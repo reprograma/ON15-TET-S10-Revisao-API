@@ -8,14 +8,14 @@ router.get("/lista", controller.findAllRestaurants);
 router.get("/lista/:id", controller.findById);
 router.get("/nameSearch", controller.findByName);
 router.get("/stars", controller.organizeAllByStar);
-router.get("/description", controller.getAllWithDescription);
-router.get("/phone", controller.getAllWithPhone);
-router.get("/adress", controller.getAllWithAdress);
-router.get("/specialty", controller.getAllWithSpecialty);
-router.get("/serviceType", controller.getAllWithServiceType);
-router.get("/hours", controller.getAllWithOpeningHours);
+router.get("/description", controller.accessDescription);
+router.get("/phone", controller.accessPhonesByName);
+router.get("/adress", controller.accessAdressByName);
+router.get("/specialty", controller.accessSpecialty);
+router.get("/serviceType", controller.accessServiceType);
+router.get("/hours", controller.accessBusinessHours);
 router.get("/deliveryTime", controller.organizeAllByDeliveryTime);
-router.get("/payment", controller.getAllWithPaymentOptions);
+router.get("/payment", controller.accessPaymentOptions);
 router.get("/menu", controller.showAllMenus);
 router.get("/priceAverage", controller.findAllByPriceAverage);
 router.get("/deliveryFee", controller.findAllByDeliveryFee);
@@ -29,7 +29,7 @@ router.put("/update/:id", controller.updateAll);
 
 router.patch("/updateName/:id", controller.updateName);
 router.patch("/updatePhone/:id", controller.updatePhone);
-router.patch("/updateItems/:id", controller.updateItems);
+router.patch("/updateItems/:id", controller.updateAnyItem);
 router.patch("/giveStars/:id", controller.giveStars);
 
 
