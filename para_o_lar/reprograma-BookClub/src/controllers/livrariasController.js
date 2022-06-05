@@ -43,8 +43,8 @@ const findAllBookStores = (request, response) => {
 
         response.status(200).json({
             "Busca por:": request.query,
-            "Restaurantes encontrados": filterBookStores.length,
-            "Lista de restaurantes": filterBookStores
+            "Livrarias encontradas": filterBookStores.length,
+            "Lista de livrarias": filterBookStores
         });
 
     } catch (error) {
@@ -98,8 +98,8 @@ const findByName = (request, response) => {
 
         response.status(200).json({
             "Busca por:": request.query,
-            "Restaurantes encontrados": filterBookStores.length,
-            "Lista de restaurantes": filterBookStores
+            "Livrarias encontradas": filterBookStores.length,
+            "Lista de livrarias": filterBookStores
         });
 
     } catch (error) {
@@ -733,8 +733,8 @@ const LikeorDeslike = (request, response) => {
             "Mensagem": "Livraria avaliada com sucesso",
             "Likes": like,
             "Deslikes": deslike,
-            "Restaurante atualizado": findBookStores,
-            "Lista de restaurantes": livrarias
+            "Livraria atualizada": findBookStores,
+            "Lista de livrarias": livrarias
         }]);
 
     } catch (error) {
