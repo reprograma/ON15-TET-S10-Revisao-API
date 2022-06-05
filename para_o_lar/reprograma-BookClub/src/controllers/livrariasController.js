@@ -114,7 +114,7 @@ const findByName = (request, response) => {
     }
 };
 
-const getAllWithPhone = (request, response) => {
+const accessPhonesByName = (request, response) => {
     const { name = null } = request.query
     try {
         let filterBookStores = livrariasModel.slice();
@@ -172,7 +172,7 @@ const getAllWithPhone = (request, response) => {
     };
 };
 
-const getAllWithAdress = (request, response) => {
+const accessAdressByNameAndCity = (request, response) => {
     const { name = null, city = null } = request.query
     try {
         let filterBookStores = livrariasModel.slice();
@@ -268,7 +268,7 @@ const getAllWithAdress = (request, response) => {
     };
 };
 
-const getAllWithPaymentOptions = (request, response) => {
+const accessPaymentOptions = (request, response) => {
     const { paymentOptions = null, name = null } = request.query
     try {
         let filterBookStores = livrariasModel.slice();
@@ -348,7 +348,7 @@ const getAllWithPaymentOptions = (request, response) => {
     };
 };
 
-const findSite = (request, response) => {
+const findSitesByName = (request, response) => {
     const { name = null } = request.query
 
     try {
@@ -409,7 +409,7 @@ const findSite = (request, response) => {
     };
 };
 
-const organizeAllLikes = (request, response) => {
+const organizeAllByLikes = (request, response) => {
     const { likes = null, name = null } = request.query
 
     try {
@@ -646,7 +646,7 @@ const updateAdress = async (request, response) => {
     };
 };
 
-const updateItems = async (request, response) => {
+const updateAnyItem = async (request, response) => {
     try {
         const livrarias = livrariasModel
         const idRequest = request.params.id
@@ -677,7 +677,7 @@ const updateItems = async (request, response) => {
     };
 };
 
-const LikeorDeslike = (request, response) => {
+const evaluateByLikeorDislike = (request, response) => {
 
     try {
 
@@ -754,15 +754,15 @@ module.exports = {
     findAllBookStores,
     findById,
     findByName,
-    getAllWithPhone,
-    getAllWithAdress,
-    getAllWithPaymentOptions,
-    findSite,
-    organizeAllLikes,
+    accessPhonesByName,
+    accessAdressByNameAndCity,
+    accessPaymentOptions,
+    findSitesByName,
+    organizeAllByLikes,
     createNewBookStore,
     deleteById,
     updateAll,
     updateAdress,
-    updateItems,
-    LikeorDeslike
+    updateAnyItem,
+    evaluateByLikeorDislike
 };
