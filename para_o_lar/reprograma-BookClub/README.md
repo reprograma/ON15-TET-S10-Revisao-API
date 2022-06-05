@@ -35,7 +35,7 @@ Para esse projeto foi criada uma Web API com o tema: [livrarias](https://github.
 ### OBJETIVO: 
 <div align = "justify">
 
-O objetivo dessa web API é reunir livrarias espalhadas pelo Brasil, tornando possível para os usuários pesquisar informações sobre os as mesmas, baseando-se em uma série de parâmetros, utilizando o método **GET**, além de possibilitar o cadastro de novas livrarias, utilizando o método **POST**, deletar cadastros com o método **DELETE**, atualizar livrarias por completo usando **PUT**, atualizar apenas o endereço ou qualquer outro item desejado e avaliar a livraria dando like ou deslike, obtendo um novo número de likes e deslikes, utilizando **PATCH**. 
+O objetivo dessa web API é reunir livrarias espalhadas pelo Brasil, tornando possível para os usuários pesquisar informações sobre as mesmas, baseando-se em uma série de parâmetros, utilizando o método **GET**, além de possibilitar o cadastro de novas livrarias, utilizando o método **POST**, deletar cadastros com o método **DELETE**, atualizar livrarias por completo usando **PUT**, atualizar apenas o endereço ou qualquer outro item desejado e avaliar a livraria dando like ou deslike, obtendo um novo número de likes e deslikes, utilizando **PATCH**. 
 
 <br>
 </div>
@@ -101,7 +101,7 @@ O servidor, criado dentro da pasta [reprograma-BookClub](https://github.com/Brun
 ## DESENVOLVIMENTO 
 <div align = "justify">
 
-Através de um modelo pré-existente, foram indexados mais 8 livrarias, encontradas na internet, para serem inseridos na API **{reprograma} Book Club**. Cada livraria foi preenchida com informações como nome, likes, deslikes, endereço, telefone os meios de pagamento aceitos e o site. Cada livraria é ordenada por um **id** numérico único.  
+Através de um modelo pré-existente, foram indexadas mais 8 livrarias, encontradas na internet, para serem inseridas na API **{reprograma} Book Club**. Cada livraria foi preenchida com informações como nome, likes, deslikes, endereço, telefone os meios de pagamento aceitos e o site. Cada livraria é ordenada por um **id** numérico único.  
   
 
 <div align = "center"> Exemplo de uma livraria cadastrada:  
@@ -206,7 +206,7 @@ Com as lógicas contruídas, a próxima etapa foi a criação das seguintes rota
 <div align = "justify">
 
 1. `GET`: localhost:8099/livrarias/lista    
-Com essa rota, é possível se ter acesso a todas as livrarias cadastrados. Para refinar a busca, os seguintes Query Params foram criados: 
+Com essa rota, é possível se ter acesso a todas as livrarias cadastradas. Para refinar a busca, os seguintes Query Params foram criados: 
 </div>
 
 <div align = "center">
@@ -214,7 +214,7 @@ Com essa rota, é possível se ter acesso a todas as livrarias cadastrados. Para
 |Query Params|Função|
 |:---  |:--- |
 |`name`|filtrar livrarias por nome|
-|`paymentOptions`|filtrarlivrarias por opções de pagamento|
+|`paymentOptions`|filtrar livrarias por opções de pagamento|
 |`city`|filtrar livrarias por cidade|
 
 
@@ -230,7 +230,7 @@ Com essa rota, é possível se ter acesso a uma livraria, buscando-a pelo **id**
 <br>
 
 3. `GET`: localhost:8099/livrarias/nameSearch?name=     
-Com essa rota, é possível se ter acesso a livrarias, buscando-os pelo nome. 
+Com essa rota, é possível se ter acesso a livrarias, buscando-as pelo nome. 
 </div>
 
 <div align = "center">

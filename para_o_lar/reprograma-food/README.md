@@ -98,7 +98,7 @@ O acrônimo CRUD tem relação direta com os verbos (métodos) GET, PUT, POST, P
 
 <div align = "justify">
     
-Todas em Tech é um projeto da [{reprograma}](https://reprograma.com.br/), que tem como objetivo ensinar programação, possibilitando oportunidades de futuro um futuro melhor, através da tecnologia, para mulheres em situações de vulnerabilidade social, econômica e de gênero, com foco em mulheres negras, trans e/ou travestis.
+Todas em Tech é um projeto da [{reprograma}](https://reprograma.com.br/), que tem como objetivo ensinar programação, possibilitando oportunidades de um futuro melhor, através da tecnologia, para mulheres em situações de vulnerabilidade social, econômica e de gênero, com foco em mulheres negras, trans e/ou travestis.
 </div>
 <br>  
 
@@ -106,7 +106,7 @@ Todas em Tech é um projeto da [{reprograma}](https://reprograma.com.br/), que t
 
 <div align = "justify">
     
-Durante a semana 10 do curso {reprograma}, as alunas tiveram uma revisão sobre o que o protocolo HTTP e seus métodos, criação de WEB API seguindo arquitetura MVC e como realizar o **CRUD**. Como projeto da semana, as alunas deveriam criar uma API sobre estabelecimentos, estando livres para escolher o tipo de comércio que gostariam de utilizar.  
+Durante a semana 10 do curso {reprograma}, as alunas tiveram uma revisão sobre o protocolo HTTP e seus métodos, criação de WEB API seguindo arquitetura MVC e como realizar o **CRUD**. Como projeto da semana, as alunas deveriam criar uma API sobre estabelecimentos, estando livres para escolher o tipo de comércio que gostariam de utilizar.  
 
 <br> 
 <br> 
@@ -760,7 +760,7 @@ Com essa rota, é possível se ter acesso a lista de restaurantes com seus nomes
 |:---  |:--- |
 |`name`|filtrar restaurantes por nome|
 |`dish`|filtrar restaurantes por pratos|
-|`ingredients`|filtrar restaurantes por pratos|
+|`ingredients`|filtrar restaurantes por ingredientes|
 
 </div>
 
