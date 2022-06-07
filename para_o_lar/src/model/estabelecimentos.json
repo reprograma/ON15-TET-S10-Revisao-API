@@ -1,28 +1,62 @@
 [
     {
         "id": 1,
-        "likes": 1,
         "nome": "Livraria Cultura",
         "endereço": "Rua Geraldo Abdala",
         "numero": 100,
-        "bairro": "centro",
+        "bairro": "Windenburg",
         "cidade": "Tangara",
         "telefone": "4156-4452",
-        "pagamento": ["Dinheiro", "pix"],
-        "site" : "livrariacultura.com.br"
+        "pagamento": ["dinheiro", "pix"],
+        "site": "livrariacultura.com.br"
     },
 
     {
         "id": 2,
-        "likes": 1,
         "nome": "Rose Variedades",
         "endereço": "Rua Geraldo Abdala",
         "numero": 200,
-        "bairro": "Bubu",
+        "bairro": "Centro",
         "cidade": "Tangara",
         "telefone": "4155-4452",
-        "pagamento": ["Dinheiro", "cartao", "pix"],
-        "site" : "rosevariedades.com.br"
+        "pagamento": ["dinheiro", "cartao", "pix"],
+        "site": "rosevariedades.com.br"
+    },
+
+    {
+        "id": 3,
+        "nome": "Livraria Mandy",
+        "endereço": "Rua Geraldo Abdala",
+        "numero": 300,
+        "bairro": "San Myshuno",
+        "cidade": "Tangara",
+        "telefone": "4155-4452",
+        "pagamento": ["cartao", "pix", "boleto"],
+        "site": "mandylivraria.com.br"
+    },
+
+    {
+        "id": 4,
+        "nome": "Mercado Livre",
+        "endereço": "Rua Geraldo Abdala",
+        "numero": 400,
+        "bairro": "Sunset Valley",
+        "cidade": "Tangara",
+        "telefone": "4155-4452",
+        "pagamento": ["dinheiro", "cartao", "pix", "boleto"],
+        "site": "mercadoLivre.com.br"
+    },
+
+    {
+        "id": 5,
+        "nome": "Livraria Adrielle",
+        "endereço": "Rua Geraldo Abdala",
+        "numero": 500,
+        "bairro": "Newcrest",
+        "cidade": "Tangara",
+        "telefone": "4155-4452",
+        "pagamento": ["dinheiro", "pix"],
+        "site": "livrariaAdrielle.com.br"
     }
-    
+
 ]
