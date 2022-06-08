@@ -1,0 +1,894 @@
+[
+    {
+        "id": 1,
+        "nome": "Mineiro Delivery - Jacareí",
+        "estrelas": 4.7
+        ,
+        "sobre": "Deliciosa comida caseira com tempero mineiro, tudo juntim em um box prático e que mantém a comida quentinha e saborosa. Nosso cardápio inclui desde o tradicional arroz com feijão acompanhados de carne suína, carne bovina, frango, peixe, camarão, até pratos como strogonoff, macarrão, porções, saudáveis, doces mineiros e bebidas geladas. Longe de ser apenas uma marmita, somos a melhor comida brasileira no box! Baião de dois, Carreteiro, Caipira, Feijoada, Churrasco, Promoções e muito mais!!!",
+        "endereco": {
+            "rua": "Amin Esper",
+            "numero": "195",
+            "bairro": "Jardim Pereira do Amparo",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12327-699"
+        },
+        "telefone": "(12)3959-2298",
+        "especialidade": [
+            "caseira",
+            "mineira"
+        ],
+        "tipoDeServico": [
+            "delivery"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 9.30,
+            "fechamento": 22.45
+        },
+        "tempoDeEntrega": 40,
+        "pagamento": [
+            "dinheiro",
+            "pix",
+            "debito",
+            "credito",
+            "vale-refeicao"
+        ],
+        "cardapio": [
+            {
+                "prato": "feijoada",
+                "Ingredientes": [
+                    "feijão carioca preto",
+                    "pedaços de pele suína",
+                    "cubos de carne seca",
+                    "paio",
+                    "pernil suíno",
+                    "bacon frito",
+                    "tiras de couve",
+                    "arroz",
+                    "farofa"
+                ],
+                "preco": 24.99
+            },
+            {
+                "prato": "carne de panela",
+                "Ingredientes": [
+                    "carne bovina cozida em cubos",
+                    "cubos de batata cozida",
+                    "cheiro verde",
+                    "arroz"
+                ],
+                "preco": 28.99
+            },
+            {
+                "prato": "fraldinha",
+                "Ingredientes": [
+                    "fraldinha selada",
+                    "cebola em tiras",
+                    "brócolis",
+                    "arroz"
+                ],
+                "preco": 28.99
+            },
+            {
+                "prato": "strogonoff de carne",
+                "Ingredientes": [
+                    "cortes de coxão mole flambados",
+                    "molho vermelho",
+                    "creme de leite",
+                    "champignon",
+                    "arroz",
+                    "batata palha"
+                ],
+                "preco": 25.99
+            },
+            {
+                "prato": "galinhada",
+                "Ingredientes": [
+                    "frango ao molho caipira",
+                    "milho verde",
+                    "cebola em cubinhos",
+                    "cheiro verde",
+                    "arroz"
+                ],
+                "preco": 23.99
+            }
+        ],
+        "taxaDeEntrega": 5,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/mineiro-delivery---jacarei-jardim-pereira-do-amparo/669c20d6-f666-444d-be61-7b707dba184f"
+    },
+    {
+        "id": 2,
+        "nome": "Vip Sushi 1 Peça = R$1 - Jacarei",
+        "estrelas": 4.7,
+        "sobre": "Com um estilo japonês brilhante, exclusivo e moderno, Vip Sushi apresenta uma nova alternativa de comida japonesa, fazendo desta culinária algo democrático, oferecendo não somente o sushi, mas sim uma experiência no conforto de sua casa. # quentes, vapor, vegetariano, melhor sushi, sushi 1 real, melhor sushi a 1 real, temaki, yakisoba, sashimi, salmão fresco, shimeji, hotroll, hotholl,combo de sushi, melhor sushi, uma comida saudável, fitness, guioza, rolinho primavera, wasabi, Vip Sushi",
+        "endereco": {
+            "rua": "Avenida Faria Lima",
+            "numero": "15",
+            "bairro": "Jardim Santa Maria",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12328-070"
+        },
+        "telefone": "(11)97449-3634",
+        "especialidade": [
+            "japonesa",
+            "sushi"
+        ],
+        "tipoDeServico": [
+            "delivery"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 11.00,
+            "fechamento": 23.00
+        },
+        "tempoDeEntrega": 58,
+        "pagamento": [
+            "pix",
+            "debito",
+            "credito"
+        ],
+        "cardapio": [
+            {
+                "prato": "hot roll - 10 unidades",
+                "Ingredientes": [
+                    "salmão grelhado temperado",
+                    "cream cheese",
+                    "tarê",
+                    "arroz"
+                ],
+                "preco": 20.90
+            },
+            {
+                "prato": "temaki de salmão",
+                "Ingredientes": [
+                    "Salmão fresco batido em pequenos cubinhos",
+                    "cebolinha",
+                    "cream cheese",
+                    "gergelim",
+                    "arroz"
+                ],
+                "preco": 23.90
+            },
+            {
+                "prato": "shimeji na manteiga",
+                "Ingredientes": [
+                    "shimeji regado na manteiga",
+                    "cebolinha fresca"
+                ],
+                "preco": 21.90
+            },
+            {
+                "prato": "yakisoba de carne",
+                "Ingredientes": [
+                    "Macarrão para yakisoba caseiro",
+                    "blend de carne",
+                    "repolho",
+                    "brócolis",
+                    "acelga",
+                    "couve-flor",
+                    "cenoura",
+                    "molho de yakisoba da casa"
+                ],
+                "preco": 34.90
+            },
+            {
+                "prato": "sashimi de salmão",
+                "Ingredientes": [
+                    "8 fatias de salmão fresco"
+                ],
+                "preco": 23.90
+            }
+        ],
+        "taxaDeEntrega": 0,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/vip-sushi-1-peca--r1---jacarei-jardim-santa-maria/3f759e9f-13ca-4e5f-bbd3-6cb52825a9e5"
+    },
+    {
+        "id": 3,
+        "nome": "Ramira Point Suco",
+        "estrelas": 4.7,
+        "sobre": "Casa de lanches, sucos e vitaminas",
+        "endereco": {
+            "rua": "Ramira Cabral",
+            "numero": "38",
+            "bairro": "Centro",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12327-300"
+        },
+        "telefone": "(12)3351-2104",
+        "especialidade": [
+            "lanche",
+            "hamburguer",
+            "vitamina",
+            "suco"
+        ],
+        "tipoDeServico": [
+            "delivery",
+            "presencial",
+            "retirada"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 8.45,
+            "fechamento": 18.00
+        },
+        "tempoDeEntrega": 60,
+        "pagamento": [
+            "dinheiro",
+            "pix",
+            "debito",
+            "credito",
+            "vale-refeicao"
+        ],
+        "cardapio": [
+            {
+                "prato": "americano",
+                "Ingredientes": [
+                    "pão tipo baguete",
+                    "presunto",
+                    "mussarela",
+                    "ovo",
+                    "alface",
+                    "tomate",
+                    "maionese"
+                ],
+                "preco": 17.00
+            },
+            {
+                "prato": "hot dog",
+                "Ingredientes": [
+                    "pão",
+                    "salsicha",
+                    "cheddar",
+                    "batata palha",
+                    "alface",
+                    "molho tártaro"
+                ],
+                "preco": 13.00
+            },
+            {
+                "prato": "x bacon",
+                "Ingredientes": [
+                    "pão",
+                    "hamburguer",
+                    "bacon",
+                    "mussarela",
+                    "maionese"
+                ],
+                "preco": 15.50
+            },
+            {
+                "prato": "x burger",
+                "Ingredientes": [
+                    "pão",
+                    "hamburguer",
+                    "mussarela"
+                ],
+                "preco": 12.00
+            },
+            {
+                "prato": "vitamina de açaí - 1 litro",
+                "Ingredientes": [
+                    "açaí",
+                    "leite condensado",
+                    "leite"
+                ],
+                "preco": 14.00
+            }
+        ],
+        "taxaDeEntrega": 7,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/ramira-point-suco-centro/e438efb8-f06c-48c8-972a-1e0aa6258f59"
+    },
+    {
+        "id": 4,
+        "nome": "Pizzaria Bianka´s",
+        "estrelas": 4.4,
+        "sobre": "PIZZARIA BIANKA´S Tradição desde 2008 em Jacareí no mesmo local que iniciou suas atividades, está completando 14 anos no mês de Novembro de 2022 e de LogoMarca novo, mantendo nossa qualidade e com diversos sabores de pizzas. agradecemos ao nossos amigos e parceiros pela preferência. :)",
+        "endereco": {
+            "rua": "Conego José Bento",
+            "numero": "13",
+            "bairro": "Centro",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12308-530"
+        },
+        "telefone": "(12)98277-3083",
+        "especialidade": [
+            "pizza"
+        ],
+        "tipoDeServico": [
+            "delivery",
+            "retirada"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 19.00,
+            "fechamento": 23.59
+        },
+        "tempoDeEntrega": 60,
+        "pagamento": [
+            "dinheiro",
+            "pix",
+            "debito",
+            "credito",
+            "vale-refeicao"
+        ],
+        "cardapio": [
+            {
+                "prato": "pizza salgada - calafrango",
+                "Ingredientes": [
+                    "molho especial",
+                    "calabresa fatiada",
+                    "filé de frango fatiado",
+                    "mussarela",
+                    "oregano",
+                    "azeitonas verdes"
+                ],
+                "preco": 54.00
+            },
+            {
+                "prato": "pizza salgada - portuguesa",
+                "Ingredientes": [
+                    "presunto",
+                    "ovo",
+                    "cebola",
+                    "mussarela",
+                    "ervilha"
+                ],
+                "preco": 46.00
+            },
+            {
+                "prato": "pizza salgada - mussarela",
+                "Ingredientes": [
+                    "molho especial",
+                    "mussarela",
+                    "tomate",
+                    "oregano",
+                    "azeitonas verdes"
+                ],
+                "preco": 43.00
+            },
+            {
+                "prato": "pizza salgada - frango com catupiry original",
+                "Ingredientes": [
+                    "molho especial",
+                    "filé de frango desfiado",
+                    "catupiry",
+                    "oregano",
+                    "azeitonas verdes"
+                ],
+                "preco": 49.50
+            },
+            {
+                "prato": "pizza doce - brigadeiro",
+                "Ingredientes": [
+                    "chocolate ao leite confeiteiro",
+                    "granulado confeiteiro",
+                    "cerejas em calda"
+                ],
+                "preco": 38.90
+            }
+        ],
+        "taxaDeEntrega": 0,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/pizzaria-biankas-centro/04d68305-7860-4e47-84e5-2de837d94912"
+    },
+    {
+        "id": 5,
+        "nome": "Sorveteria Crenata",
+        "estrelas": 4.8,
+        "sobre": "Sorvete, Açaí e Sobremesa.",
+        "endereco": {
+            "rua": "Alfredo Ramos",
+            "numero": "149",
+            "bairro": "Centro",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12308-420"
+        },
+        "telefone": "(12)98843-7157",
+        "especialidade": [
+            "sorvete",
+            "açai",
+            "doces"
+        ],
+        "tipoDeServico": [
+            "delivery",
+            "retirada",
+            "presencial"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 11.00,
+            "fechamento": 19.00
+        },
+        "tempoDeEntrega": 70,
+        "pagamento": [
+            "dinheiro",
+            "pix",
+            "debito",
+            "credito"
+        ],
+        "cardapio": [
+            {
+                "prato": "Sorvete Napolitano 1 litro",
+                "Ingredientes": [
+                    "sorvete de morango",
+                    "sorvete de chocolate",
+                    "sorvete de nata"
+                ],
+                "preco": 15.00
+            },
+            {
+                "prato": "Sorvete Sensação 2 litros",
+                "Ingredientes": [
+                    "sorvete de morango",
+                    "cobertura de morango",
+                    "pedaços de chocolate ao leite"
+                ],
+                "preco": 27.00
+            },
+            {
+                "prato": "Picolé de coco",
+                "Ingredientes": [
+                    "leite",
+                    "pedaços de coco"
+                ],
+                "preco": 3.00
+            },
+            {
+                "prato": "Açaí 500 ml",
+                "Ingredientes": [
+                    "xarope de guaraná",
+                    "polpa de açaí",
+                    "adicional"
+                ],
+                "preco": 11.00
+            },
+            {
+                "prato": "brigadeiro",
+                "Ingredientes": [
+                    "leite condensado",
+                    "chocolate",
+                    "granulado"
+                ],
+                "preco": 3.00
+            }
+        ],
+        "taxaDeEntrega": 0,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/sorveteria-crenata-centro/82f3468b-14cf-4ffd-a2ea-48f3a974f5b2"
+    },
+    {
+        "id": 6,
+        "nome": "Padaria União de Jacareí",
+        "estrelas": 4.8,
+        "sobre": "A Padaria União, inaugurada há mais de 30 anos, já está entre as melhores de Jacareí. Servimos almoço, lanches, sanduíches, salgados, bebidas, sucos naturais, além da nossa imensa variedade dos deliciosos pães e doces.",
+        "endereco": {
+            "rua": "Embaixador José Carlos Macedo Soares",
+            "numero": "258",
+            "bairro": "Jardim Santa Maria",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12328-110"
+        },
+        "telefone": "(12)3961-2046",
+        "especialidade": [
+            "pão",
+            "doce",
+            "lanche",
+            "bebida",
+            "salgado"
+        ],
+        "tipoDeServico": [
+            "delivery",
+            "retirada",
+            "presencial"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 9.00,
+            "fechamento": 21.30
+        },
+        "tempoDeEntrega": 32,
+        "pagamento": [
+            "pix",
+            "debito",
+            "credito",
+            "vale-refeicao"
+        ],
+        "cardapio": [
+            {
+                "prato": "pão francês - 10 unidades",
+                "Ingredientes": [
+                    "farinha de trigo",
+                    "fermento para pão",
+                    "sal"
+                ],
+                "preco": 14.0
+            },
+            {
+                "prato": "cheesecake de frutas vermelhas - unidade",
+                "Ingredientes": [
+                    "biscoitos maisena",
+                    "leite condensado",
+                    "creme de leite",
+                    "cream cheese",
+                    "framboesas picadas",
+                    "morangos picados",
+                    "açúcar"
+                ],
+                "preco": 4.99
+            },
+            {
+                "prato": "lanche light na chapa",
+                "Ingredientes": [
+                    "pão francês",
+                    "queijo minas",
+                    "tomate",
+                    "orégano"
+                ],
+                "preco": 20.40
+            },
+            {
+                "prato": "mini pão de queijo",
+                "Ingredientes": [
+                    "polvilho azedo",
+                    "ovos",
+                    "queijo",
+                    "leite",
+                    "sal"
+                ],
+                "preco": 9.90
+            },
+            {
+                "prato": "suco 300 ml",
+                "Ingredientes": [
+                    "suco sabor laranja ou uva"
+                ],
+                "preco": 8.80
+            }
+        ],
+        "taxaDeEntrega": 3.99,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/padaria-uniao-de-jacarei-jardim-santa-maria/d51a8806-069b-45ba-a23e-cd427ffcc9ff"
+    },
+    {
+        "id": 7,
+        "nome": "Tedy Salgados (Fritos na Hora)",
+        "estrelas": 4.6,
+        "sobre": "✨ Tedy Salgados ✨ Salgados de Qualidade ✨",
+        "endereco": {
+            "rua": "Guatimossi da Silva Rossi",
+            "numero": "15",
+            "bairro": "Conjunto Sao Benedito",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12310-360"
+        },
+        "telefone": "(12)3953-3110",
+        "especialidade": [
+            "salgado"
+        ],
+        "tipoDeServico": [
+            "delivery",
+            "retirada"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 11.30,
+            "fechamento": 23.30
+        },
+        "tempoDeEntrega": 70,
+        "pagamento": [
+            "dinheiro",
+            "pix",
+            "debito",
+            "credito",
+            "vale-refeicao"
+        ],
+        "cardapio": [
+            {
+                "prato": "kit com 100 salgados",
+                "Ingredientes": [
+                    "coxinha",
+                    "bolinha de queijo",
+                    "risoli de pizza",
+                    "risoli de carne"
+                ],
+                "preco": 59.00
+            },
+            {
+                "prato": "kit com 100 bolinhos caipira",
+                "Ingredientes": [
+                    "farinha de milho amarela",
+                    "cebolinha",
+                    "recheio de linguiça"
+                ],
+                "preco": 120.00
+            },
+            {
+                "prato": "kit com 50 enroladinhos de queijo",
+                "Ingredientes": [
+                    "queijo"
+                ],
+                "preco": 49.00
+            },
+            {
+                "prato": "kit com 50 espetinhos de frango",
+                "Ingredientes": [
+                    "frango empanado"
+                ],
+                "preco": 49.00
+            },
+            {
+                "prato": "Refrigerante 2 litros",
+                "Ingredientes": [
+                    "Sabores: Cola, Limão, Laranja ou Uva"
+                ],
+                "preco": 13.00
+            }
+        ],
+        "taxaDeEntrega": 5,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/tedy-salgados-fritos-na-hora-conjunto-sao-benedito/900cf163-b18a-498a-a2d3-67a31bc61229"
+    },
+    {
+        "id": 8,
+        "nome": "Estação Suco II - Jacareí Carlos Porto",
+        "estrelas": 4.5,
+        "sobre": "Estação do Suco é para qualquer hora. A melhor em sucos, lanches e açaís. Qualquer duvida sobre seu pedido pode nos chamar no chat.",
+        "endereco": {
+            "rua": " Av. Carlos Porto",
+            "numero": "151",
+            "bairro": "Centro",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12327-280"
+        },
+        "telefone": "(12)3965-0747",
+        "especialidade": [
+            "suco",
+            "lanche",
+            "açai"
+        ],
+        "tipoDeServico": [
+            "delivery",
+            "retirada",
+            "presencial"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 10.00,
+            "fechamento": 22.30
+        },
+        "tempoDeEntrega": 48,
+        "pagamento": [
+            "debito",
+            "credito"
+        ],
+        "cardapio": [
+            {
+                "prato": "Suco Laranja - 1 litro",
+                "Ingredientes": [
+                    "laranja",
+                    "yakult"
+                ],
+                "preco": 14.99
+            },
+            {
+                "prato": "Beirute de frango",
+                "Ingredientes": [
+                    "filé de frango",
+                    "queijo",
+                    "orégano",
+                    "molho tártaro",
+                    "alface",
+                    "tomate",
+                    "fritas",
+                    "pão sírio"
+                ],
+                "preco": 28.90
+            },
+            {
+                "prato": "Parmegianinha + 1 refrigerante guaraná 210 ml",
+                "Ingredientes": [
+                    "Peito de frango empanado",
+                    "molho",
+                    "queijo",
+                    "pão de hamburguer ou francês",
+                    "fritas"
+                ],
+                "preco": 28.90
+            },
+            {
+                "prato": "x salada",
+                "Ingredientes": [
+                    "Pao de hambúrguer",
+                    "hambúrguer",
+                    "queijo",
+                    "alface",
+                    "tomate"
+                ],
+                "preco": 19.90
+            },
+            {
+                "prato": "açaí 300 ml",
+                "Ingredientes": [
+                    "xarope de guaraná",
+                    "polpa de açaí",
+                    "leite ninho",
+                    "leite condensado"
+                ],
+                "preco": 25.02
+            }
+        ],
+        "taxaDeEntrega": 0,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/estacao-suco-ii---jacarei-carlos-porto-centro/d2c8f598-1bc6-49b3-9af6-2b0051b24f6f"
+    },
+    {
+        "id": 9,
+        "nome": "Paraíso Marmitex",
+        "estrelas": 4.7,
+        "sobre": "Aberto de Segunda a Sabado com marmitex das 10h15 as 14:15! Para qualquer duvida nosso whatsapp 12-98816-5451",
+        "endereco": {
+            "rua": "Amazilli Ramos de Azevedo",
+            "numero": "268",
+            "bairro": "Jardim Paraíso",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12316-460"
+        },
+        "telefone": "(12)98816-5451",
+        "especialidade": [
+            "almoço",
+            "marmitex"
+        ],
+        "tipoDeServico": [
+            "delivery",
+            "retirada"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 10.15,
+            "fechamento": 14.15
+        },
+        "tempoDeEntrega": 50,
+        "pagamento": [
+            "dinheiro",
+            "pix",
+            "debito",
+            "credito",
+            "vale-refeicao"
+        ],
+        "cardapio": [
+            {
+                "prato": "feijoada - pequena",
+                "Ingredientes": [
+                    "feijoada",
+                    "couve",
+                    "arroz",
+                    "farofa"
+                ],
+                "preco": 17.00
+            },
+            {
+                "prato": "almondegas de carne - pequena",
+                "Ingredientes": [
+                    "arroz",
+                    "feijão",
+                    "farofa",
+                    "macarrão penne ao molho rosê",
+                    "almondegas"
+                ],
+                "preco": 15.00
+            },
+            {
+                "prato": "filé de frango a parmegiana - pequena",
+                "Ingredientes": [
+                    "arroz",
+                    "feijão",
+                    "farofa",
+                    "macarrão penne ao molho rosê",
+                    "filé de frango a parmegiana"
+                ],
+                "preco": 15.00
+            },
+            {
+                "prato": "linguiça toscana com ovo - pequena",
+                "Ingredientes": [
+                    "arroz",
+                    "feijão",
+                    "farofa",
+                    "macarrão penne ao molho rosê",
+                    "linguiça toscana com ovo"
+                ],
+                "preco": 15.00
+            },
+            {
+                "prato": "nhoc bolonhesa com mussarela",
+                "Ingredientes": [
+                    "nhoc bolonhesa",
+                    "mussarela",
+                    "molho",
+                    "oregano"
+                ],
+                "preco": 18.00
+            }
+        ],
+        "taxaDeEntrega": 1,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/paraiso-marmitex-jardim-paraiso/35479815-f8ce-4da2-a590-ee527e200d2a"
+    },
+    {
+        "id": 10,
+        "nome": "Açai 100 Miséria - Loja 2",
+        "estrelas": 5.0,
+        "sobre": "O melhor açaí de Jacareí agora com sua segunda unidade! Desde 2014 fazendo a diferença na sua família! Peça e se surpreenda com nossa sabor!",
+        "endereco": {
+            "rua": "Taubaté",
+            "numero": "117",
+            "bairro": "Jardim das Indústrias",
+            "cidade": "Jacareí",
+            "estado": "São Paulo",
+            "CEP": "12306-003"
+        },
+        "telefone": "(12)3951-2088",
+        "especialidade": [
+            "açai"
+        ],
+        "tipoDeServico": [
+            "delivery"
+        ],
+        "horarioDeFuncionamento": {
+            "abertura": 7.00,
+            "fechamento": 23.59
+        },
+        "tempoDeEntrega": 55,
+        "pagamento": [
+            "dinheiro",
+            "pix",
+            "debito",
+            "credito",
+            "vale-refeicao"
+        ],
+        "cardapio": [
+            {
+                "prato": "tigela - 1 litro",
+                "Ingredientes": [
+                    "xarope de guaraná",
+                    "polpa de açaí"
+                ],
+                "preco": 25.00
+            },
+            {
+                "prato": "açaí 300 ml - leite condensado e banana",
+                "Ingredientes": [
+                    "xarope de guaraná",
+                    "polpa de açaí",
+                    "leite condensado",
+                    "banana"
+                ],
+                "preco": 8.32
+            },
+            {
+                "prato": "açaí 300 ml - leite condensado e granulado",
+                "Ingredientes": [
+                    "xarope de guaraná",
+                    "polpa de açaí",
+                    "leite condensado",
+                    "granulado"
+                ],
+                "preco": 8.32
+            },
+            {
+                "prato": "açaí 500 ml - calda de morango e leite em pó",
+                "Ingredientes": [
+                    "xarope de guaraná",
+                    "polpa de açaí",
+                    "calda de morango",
+                    "leite em pó"
+                ],
+                "preco": 9.99
+            },
+            {
+                "prato": "açaí 500 ml - puro",
+                "Ingredientes": [
+                    "xarope de guaraná",
+                    "polpa de açaí"
+                ],
+                "preco": 12.00
+            }
+        ],
+        "taxaDeEntrega": 6,
+        "Ifood": "https://www.ifood.com.br/delivery/jacarei-sp/acai-100-miseria---loja-2-jardim-das-industrias/32c3cde2-40d0-4400-999e-45dafc5711c9"
+    }
+]

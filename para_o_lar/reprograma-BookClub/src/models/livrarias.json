@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Livraria Cultura",
+        "endereço": "Rua Geraldo Abdala",
+        "numero": 100,
+        "bairro": "centro",
+        "cidade": "Tangara",
+        "telefone": "(11) 4156-4452",
+        "pagamento": ["Dinheiro", "pix"],
+        "site" : "livrariacultura.com.br"
+    },
+
+    {
+        "id": 2,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Rose Variedades",
+        "endereço": "Rua Geraldo Abdala",
+        "numero": 200,
+        "bairro": "Bubu",
+        "cidade": "Tangara",
+        "telefone": "(11) 4155-4452",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "rosevariedades.com.br"
+    },
+    
+    {
+        "id": 3,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Livraria e Papelaria Skilo",
+        "endereço": "Avenida Coronel Carlos Porto",
+        "numero": 165,
+        "bairro": "Jardim Pereira do Amparo",
+        "cidade": "Jacareí",
+        "telefone": "(12) 3962-4624",
+        "pagamento": ["Dinheiro", "cartao"],
+        "site" : "livrariaepapelariaskilo.com.br"
+    },
+
+    {
+        "id": 4,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Livraria Martins Fontes Paulista",
+        "endereço": "Avenida Paulista",
+        "numero": 509,
+        "bairro": "Bela Vista",
+        "cidade": "São Paulo",
+        "telefone": "(11) 2167-9900",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "martinsfonteslivraria.com.br"
+    },
+
+    {
+        "id": 5,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Livraria Cultura - Conjunto Nacional",
+        "endereço": "Avenida Paulista",
+        "numero": 2073,
+        "bairro": "Bela Vista",
+        "cidade": "São Paulo",
+        "telefone": "(11) 3170-4033",
+        "pagamento": ["cartao", "pix"],
+        "site" : "livrariacultura-conjuntonacional.com.br"
+    },
+
+    {
+        "id": 6,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Livraria Leonardo da Vince",
+        "endereço": "Avenida Rio Branco",
+        "numero": 185,
+        "bairro": "Centro",
+        "cidade": "Rio de Janeiro",
+        "telefone": "(21) 2533-2237",
+        "pagamento": ["pix"],
+        "site" : "daVincelivraria.com.br"
+    },
+
+    {
+        "id": 7,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Livraria da Travessa - Ipanema",
+        "endereço": "Rua Visconde de Pirajá",
+        "numero": 572,
+        "bairro": "Ipanema",
+        "cidade": "Rio de Janeiro",
+        "telefone": "(21) 3205-9002",
+        "pagamento": ["cartao"],
+        "site" : "travessabooks.com.br"
+    },
+
+    {
+        "id": 8,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Leitura",
+        "endereço": "Avenida Cristiano Machado",
+        "numero": 4000,
+        "bairro": "União",
+        "cidade": "Belo Horizonte",
+        "telefone": "(31)3426-1101",
+        "pagamento": ["Dinheiro", "cartao", "pix"],
+        "site" : "livrariaLeitura.com.br"
+    },
+
+    {
+        "id": 9,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "SBS - Livraria Internacional - Minas Gerais",
+        "endereço": "Rua Silva Jardim",
+        "numero": 235,
+        "bairro": "Floresta",
+        "cidade": "Belo Horizonte",
+        "telefone": "(31) 3422-3040",
+        "pagamento": ["Dinheiro", "cartao"],
+        "site" : "livrariasbs.com.br"
+    },
+
+    {
+        "id": 10,
+        "likes": 1,
+        "deslikes": 1,
+        "nome": "Livraria Imperatriz",
+        "endereço": "Rua Padre Carapuceiro",
+        "numero": 777,
+        "bairro": "Boa Viagem",
+        "cidade": "Recife",
+        "telefone": "(81) 3038-9398",
+        "pagamento": ["Dinheiro"],
+        "site" : "livrariaimperatriz.com.br"
+    }
+
+]
