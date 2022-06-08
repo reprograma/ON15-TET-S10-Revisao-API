@@ -1,6 +1,6 @@
 const businessModel = require("../models/businessModels.json")
 
-//porta 8070
+//port 8070
 const getAll = (req, res) => {
     try {
        
@@ -150,44 +150,33 @@ const updateStore = (req, res) => {
 
 }
 
-/* const updateLikes = (req, res) => {
-    // const { likes, dislikes } = req.body
+const updateLikes = (req, res) => {
+    const { likes } = req.body
     try {
-        const bodyRequest = req.body       
-        //find the place by the name
+        //find the item by id
         const idRequest = req.params.id
         //check if its the same as the one at json
-        const storeFound = businessModel.find(search => search.id.toLocaleLowerCase().includes(idRequest.toLocaleLowerCase()))
+        const storeFound = businessModel.find(store => store.id == idRequest)
+        console.log(storeFound)
 
         if(!storeFound) throw new Error("Estabelecimento não localizado")
 
-        const index = businessModel.indexOf(storeFound)
-
-        const itsLiked = businessModel.find(store => {
-            if(store.likes == true) {
-                store.dislikes = false
-                itsLiked = businessModel.splice(index, 1, store.dislikes)
-                businessModel.push(itsLiked)
+        for (let item of businessModel) {
+            if(likes == true) {
+                item.likes += 1
+            }else {
+                item.dislikes += 1
+                item.likes -= 1
             }
-        } )
-
-        const itsDisliked = businessModel.find(store => {
-            if(store.dislikes == true) {
-                store.likes = false
-                itsDisliked = businessModel.splice(index, 1, store.likes)
-                businessModel.push(itsDisliked)
-
-            }
-        })
-
-
-        res.status(200).json(bodyRequest)
+            
+        }
+        res.status(200).json(storeFound)
     } catch (error) {
         res.status(404).json({
             details: error.message})
         
     }
-} */
+}
 
 const changeStore = (req, res) => {
     try {
@@ -235,7 +224,7 @@ module.exports = {
     findSome,
     createStore,
     updateStore,
-    // updateLikes,
+    updateLikes,
     changeStore,
     deleteStore
 }
