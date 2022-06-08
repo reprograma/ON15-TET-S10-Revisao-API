@@ -1399,7 +1399,7 @@ const deleteById = (request, response) => {
     };
 };
 
-const updateAll = async (request, response) => {
+const updateAll = (request, response) => {
 
     try {
         const restaurantes = restaurantesModel
@@ -1429,7 +1429,7 @@ const updateAll = async (request, response) => {
     };
 };
 
-const updateName = async (request, response) => {
+const updateName =  (request, response) => {
     try {
         const restaurantes = restaurantesModel
         const idRequest = request.params.id
@@ -1456,7 +1456,7 @@ const updateName = async (request, response) => {
     };
 };
 
-const updatePhone = async (request, response) => {
+const updatePhone =  (request, response) => {
     try {
         const restaurantes = restaurantesModel
         const idRequest = request.params.id
@@ -1483,7 +1483,7 @@ const updatePhone = async (request, response) => {
     };
 };
 
-const updateAnyItem = async (request, response) => {
+const updateAnyItem = (request, response) => {
     try {
         const restaurantes = restaurantesModel
         const idRequest = request.params.id

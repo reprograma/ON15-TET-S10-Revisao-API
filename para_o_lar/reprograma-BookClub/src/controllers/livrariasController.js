@@ -580,7 +580,7 @@ const deleteById = (request, response) => {
     };
 };
 
-const updateAll = async (request, response) => {
+const updateAll = (request, response) => {
 
     try {
         const livrarias = livrariasModel
@@ -610,7 +610,7 @@ const updateAll = async (request, response) => {
     };
 };
 
-const updateAdress = async (request, response) => {
+const updateAdress =  (request, response) => {
 
     try {
         const livrarias = livrariasModel
@@ -646,7 +646,7 @@ const updateAdress = async (request, response) => {
     };
 };
 
-const updateAnyItem = async (request, response) => {
+const updateAnyItem =  (request, response) => {
     try {
         const livrarias = livrariasModel
         const idRequest = request.params.id
