@@ -3,29 +3,13 @@
         "id": 0,
         "autor": "Andrew donkin",
         "paginas" : 122,
-<<<<<<< HEAD
-<<<<<<< HEAD
         "titulo" : "Atermis Fowl"
-=======
-        "titulo" : "Atermis Fowl" 
->>>>>>> 9b15933 (aula 28/05)
-=======
-        "titulo" : "Atermis Fowl" 
->>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
     },
     {
         "id": 1,
         "autor": "J.K. Rowling",
         "paginas" : 208,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "titulo" : "Harry Potter e a pedra filosofal fogo" 
-=======
-        "titulo" : "Harry Potter e a pedra filosofal" 
->>>>>>> 9b15933 (aula 28/05)
-=======
-        "titulo" : "Harry Potter e a pedra filosofal" 
->>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
+        "titulo" : "Harry Potter e a pedra filosofal"
     },
     {
         "id": 2,
@@ -45,14 +29,4 @@
         "paginas" : 432,
         "titulo" : "Harry Potter e o enigma do príncipe" 
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ]
-
-
-=======
-]
->>>>>>> 9b15933 (aula 28/05)
-=======
-]
->>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
