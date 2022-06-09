@@ -2,6 +2,7 @@
     {
         "id": 1,
         "likes": 1,
+        "deslikes": 0,
         "nome": "Livraria Cultura",
         "endereço": "Rua Geraldo Abdala",
         "numero": 100,
@@ -15,6 +16,7 @@
     {
         "id": 2,
         "likes": 1,
+        "deslikes": 0,
         "nome": "Rose Variedades",
         "endereço": "Rua Geraldo Abdala",
         "numero": 200,
