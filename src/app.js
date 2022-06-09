@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // importar as dependencias
 const express = require('express');
 const cors = require('cors')
@@ -17,9 +15,6 @@ app.use(cors())
 app.use("/livros", livrosRotas)
 
 // exporta ( deixa publica) a nossa api
-=======
-=======
->>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
 const express = require("express")
 const cors = require("cors")
 const app = express()
@@ -30,10 +25,4 @@ app.use(cors())
 
 app.use("/livros", livrosRoutes)
 
-
-
-<<<<<<< HEAD
->>>>>>> 9b15933 (aula 28/05)
-=======
->>>>>>> 9b159333f70525ae070b449d887ceb666ab80250
 module.exports = app
