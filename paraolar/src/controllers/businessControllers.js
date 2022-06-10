@@ -36,31 +36,25 @@ const findSome = (req,res) => {
 
     try {
         let filterStores = businessModel.slice()
+        console.log(filterStores)
 
         if(store) {
             filterStores = filterStores.filter(business => business.store.toLowerCase().normalize("NFD").replace(/[^a-zA-Zs]/g, "").includes(store.toLowerCase().normalize("NFD").replace(/[^a-zA-Zs]/g, "")))
             
         }
-   
+        
         if(type) {
             filterStores = filterStores.filter(storeType => storeType.type.toString().toLowerCase().includes(type.toLowerCase()))
         }
-
+                
         if(neighborhood) {
             filterStores = filterStores.filter(storeNeighborhood => storeNeighborhood.neighborhood.toLocaleLowerCase().includes(neighborhood.toLocaleLowerCase()))
-        }
-        if(!store || !type || !neighborhood) {
-            throw {
-                statusCode: 400,
-                message: "Não possuímos estabelecimentos cadastrados nesses parametros",
-                
-            }
         }
 
         if(filterStores.length === 0) {
             throw new Error("Nenhum estabelecimento foi encontrado")
         }
-
+        
         res.status(200).json(filterStores)
 
     } catch (error) {
