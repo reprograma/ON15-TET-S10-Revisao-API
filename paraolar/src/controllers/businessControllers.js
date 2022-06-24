@@ -36,8 +36,6 @@ const findSome = (req,res) => {
 
     try {
         let filterStores = businessModel.slice()
-        console.log(filterStores)
-
         if(store) {
             filterStores = filterStores.filter(business => business.store.toLowerCase().normalize("NFD").replace(/[^a-zA-Zs]/g, "").includes(store.toLowerCase().normalize("NFD").replace(/[^a-zA-Zs]/g, "")))
             
