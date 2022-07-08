@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "tipoCategoria": "Supermercado",
+    "bairro" : "Dos Limoes"
+  }, 
+  {
+    "id": 1,
+    "tipoCategoria": "Crossfit",
+    "bairro" : "Enseada dos corais"
+  },
+  {
+    "id": 2,
+    "tipoCategoria": "Academia",
+    "bairro" : "cabo de santo agostinho"
+  },
+  {
+    "id": 3,
+    "tipoCategoria": "shopping",
+    "bairro" : "Recife"
+  }
+
+]
+
