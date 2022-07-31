@@ -7,3 +7,5 @@ const router = express.Router()
 
 router.get("/estabelecimento", controller.enseada)
 
+module.exports = router
+
